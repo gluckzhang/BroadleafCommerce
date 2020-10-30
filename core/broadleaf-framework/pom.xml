@@ -53,6 +53,25 @@
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
             </plugin>
+            <plugin>
+              <groupId>org.pitest</groupId>
+              <artifactId>pitest-maven</artifactId>
+              <version>1.5.0</version>
+              <configuration>
+                <outputFormats>
+                  <value>JSON</value>
+                  <value>METHODS</value>
+                </outputFormats>
+                <mutationEngine>descartes</mutationEngine>
+              </configuration>
+              <dependencies>
+                <dependency>
+                  <groupId>eu.stamp-project</groupId>
+                  <artifactId>descartes</artifactId>
+                  <version>1.2.6</version>
+                </dependency>
+              </dependencies>
+            </plugin>
         </plugins>
     </build>
     <profiles>
@@ -156,6 +175,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.thoughtworks.xstream</groupId>
+          <artifactId>xstream</artifactId>
+          <version>1.4.12</version>
+          <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
