@@ -27,6 +27,23 @@ public class TestDynamicSkuPricesPanktiGen {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
         "  <retailPrice>" +
+        "    <float>4.99</float>" +
+        "  </retailPrice>" +
+        "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices receivingObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(receivingObjectStr);
+        String returnedObjectStr = 
+        "<org.broadleafcommerce.common.money.Money>" +
+        "  <float>4.99</float>" +
+        "</org.broadleafcommerce.common.money.Money>";
+        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        Assert.assertEquals(expectedObject, receivingObject.getPrice());
+    }
+
+    @Test
+    public void testGetPrice2() throws Exception {
+        String receivingObjectStr = 
+        "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
+        "  <retailPrice>" +
         "    <float>6.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";

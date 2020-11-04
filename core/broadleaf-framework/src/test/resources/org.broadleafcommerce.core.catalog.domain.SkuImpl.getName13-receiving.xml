@@ -16,21 +16,21 @@
   #L%
   -->
 <org.broadleafcommerce.core.catalog.domain.SkuImpl>
-  <id>6</id>
-  <retailPrice>6.99000</retailPrice>
-  <cost>5.40000</cost>
-  <name>Day of the Dead Scotch Bonnet Hot Sauce</name>
-  <longDescription>Often mistaken for the Habanero, the Scotch Bonnet has a deeply inverted tip as opposed to the pointed end of the Habanero. Ranging in many colors from green to yellow-orange, the Scotch Bonnet is a staple in West Indies and Barbados style pepper sauces.</longDescription>
+  <id>12</id>
+  <retailPrice>4.99000</retailPrice>
+  <cost>3.09000</cost>
+  <name>Cafe Louisiane Sweet Cajun Blackening Sauce</name>
+  <longDescription>One of the more unusual sauces we sell. The original was an old style Cajun sauce and this is it's updated blackening version. It's sweet but you get a great hit of cinnamon and cloves with a nice kick of cayenne heat. Use on all foods to give that Cajun flair!</longDescription>
   <taxable>Y</taxable>
   <discountable>Y</discountable>
   <activeStartDate class="java.sql.Timestamp" serialization="custom">
     <date>
       <default/>
-      <long>1603891891000</long>
+      <long>1604521149000</long>
     </date>
     <java.sql.Timestamp>
       <default>
-        <nanos>279000000</nanos>
+        <nanos>438000000</nanos>
       </default>
     </java.sql.Timestamp>
   </activeStartDate>
@@ -40,19 +40,19 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuMedia</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <storedSnapshot class="map">
       <entry>
         <string>alt1</string>
         <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
-          <id>-76</id>
+          <id>-70</id>
           <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../../../../.."/>
           <media class="org.broadleafcommerce.common.media.domain.MediaImpl">
-            <id>602</id>
-            <url>/cmsstatic/img/sauces/Day-of-the-Dead-Scotch-Bonnet-Hot-Sauce-Close.jpg</url>
-            <title>Day of the Dead Scotch Bonnet Hot Sauce Close-up</title>
+            <id>1202</id>
+            <url>/cmsstatic/img/sauces/Cafe-Louisiane-Sweet-Cajun-Blackening-Sauce-Close.jpg</url>
+            <title>Cafe Louisiane Sweet Cajun Blackening Sauce Close-up</title>
             <altText>alt1</altText>
           </media>
           <key>alt1</key>
@@ -61,12 +61,12 @@
       <entry>
         <string>primary</string>
         <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
-          <id>-95</id>
+          <id>-89</id>
           <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../../../../.."/>
           <media class="org.broadleafcommerce.common.media.domain.MediaImpl">
-            <id>601</id>
-            <url>/cmsstatic/img/sauces/Day-of-the-Dead-Scotch-Bonnet-Hot-Sauce-Bottle.jpg</url>
-            <title>Day of the Dead Scotch Bonnet Hot Sauce Bottle</title>
+            <id>1201</id>
+            <url>/cmsstatic/img/sauces/Cafe-Louisiane-Sweet-Cajun-Blackening-Sauce-Bottle.jpg</url>
+            <title>Cafe Louisiane Sweet Cajun Blackening Sauce Bottle</title>
             <altText>primary</altText>
           </media>
           <key>primary</key>
@@ -87,10 +87,10 @@
   </skuMedia>
   <legacySkuMedia/>
   <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
-    <id>6</id>
-    <url>/hot-sauces/day_of_the_dead_scotch_bonnet_sauce</url>
+    <id>12</id>
+    <url>/hot-sauces/cafe_louisiane_sweet_cajun_blackening_sauce</url>
     <overrideGeneratedUrl>false</overrideGeneratedUrl>
-    <manufacturer>Spice Exchange</manufacturer>
+    <manufacturer>Garden Row</manufacturer>
     <isFeaturedProduct>false</isFeaturedProduct>
     <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <skus/>
@@ -100,7 +100,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.crossSaleProducts</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -111,7 +111,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.upSaleProducts</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -122,7 +122,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.additionalSkus</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -133,7 +133,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.allParentCategoryXrefs</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -144,23 +144,21 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productAttributes</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
     </productAttributes>
     <productOptions class="org.hibernate.collection.internal.PersistentBag">
       <isTempSession>false</isTempSession>
-      <initialized>true</initialized>
+      <initialized>false</initialized>
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productOptions</role>
-      <key class="long">6</key>
+      <key class="long">12</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
-      <storedSnapshot class="list"/>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
-      <bag/>
     </productOptions>
   </defaultProduct>
   <skuAttributes class="org.hibernate.collection.internal.PersistentBag">
@@ -169,7 +167,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuAttributes</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -180,7 +178,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.productOptionValueXrefs</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <storedSnapshot class="map"/>
@@ -194,7 +192,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fees</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -205,7 +203,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fulfillmentFlatRates</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -216,7 +214,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.excludedFulfillmentOptions</role>
-    <key class="long">6</key>
+    <key class="long">12</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>

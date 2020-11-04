@@ -16,21 +16,21 @@
   #L%
   -->
 <org.broadleafcommerce.core.catalog.domain.SkuImpl>
-  <id>200</id>
-  <retailPrice>14.99000</retailPrice>
-  <cost>4.69000</cost>
-  <name>Hawt Like a Habanero Shirt (Women's)</name>
-  <longDescription>Women's Habanero collection standard short sleeve screen-printed tee shirt in soft 30 singles cotton in regular fit.</longDescription>
+  <id>500</id>
+  <retailPrice>15.99000</retailPrice>
+  <cost>4.89000</cost>
+  <name>Heat Clinic Mascot (Men's)</name>
+  <longDescription>Don't you just love our mascot? Get your very own shirt today!</longDescription>
   <taxable>Y</taxable>
   <discountable>Y</discountable>
   <activeStartDate class="java.sql.Timestamp" serialization="custom">
     <date>
       <default/>
-      <long>1603891891000</long>
+      <long>1604521149000</long>
     </date>
     <java.sql.Timestamp>
       <default>
-        <nanos>325000000</nanos>
+        <nanos>477000000</nanos>
       </default>
     </java.sql.Timestamp>
   </activeStartDate>
@@ -40,15 +40,15 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuMedia</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
   </skuMedia>
   <legacySkuMedia/>
   <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
-    <id>200</id>
-    <url>/merchandise/hawt_like_a_habanero_womens</url>
+    <id>500</id>
+    <url>/merchandise/heat_clinic_mascot_mens</url>
     <manufacturer>The Heat Clinic</manufacturer>
     <isFeaturedProduct>false</isFeaturedProduct>
     <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
@@ -59,7 +59,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.crossSaleProducts</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -70,7 +70,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.upSaleProducts</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -81,7 +81,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.additionalSkus</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -92,7 +92,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.allParentCategoryXrefs</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -103,7 +103,7 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productAttributes</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <storedSnapshot class="list"/>
@@ -116,12 +116,12 @@
       <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
       <cachedSize>-1</cachedSize>
       <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productOptions</role>
-      <key class="long">200</key>
+      <key class="long">500</key>
       <dirty>false</dirty>
       <elementRemoved>false</elementRemoved>
       <storedSnapshot class="list">
         <org.broadleafcommerce.core.catalog.domain.ProductOptionXrefImpl>
-          <id>2</id>
+          <id>5</id>
           <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../../../.."/>
           <productOption class="org.broadleafcommerce.core.catalog.domain.ProductOptionImpl">
             <id>1</id>
@@ -181,7 +181,7 @@
           </productOption>
         </org.broadleafcommerce.core.catalog.domain.ProductOptionXrefImpl>
         <org.broadleafcommerce.core.catalog.domain.ProductOptionXrefImpl>
-          <id>8</id>
+          <id>11</id>
           <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../../../.."/>
           <productOption class="org.broadleafcommerce.core.catalog.domain.ProductOptionImpl">
             <id>2</id>
@@ -261,7 +261,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuAttributes</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <storedSnapshot class="list"/>
@@ -274,7 +274,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.productOptionValueXrefs</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -286,7 +286,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fees</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -297,7 +297,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fulfillmentFlatRates</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
@@ -308,7 +308,7 @@
     <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
     <cachedSize>-1</cachedSize>
     <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.excludedFulfillmentOptions</role>
-    <key class="long">200</key>
+    <key class="long">500</key>
     <dirty>false</dirty>
     <elementRemoved>false</elementRemoved>
     <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>

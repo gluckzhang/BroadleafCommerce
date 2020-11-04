@@ -19,12 +19,10 @@ package org.broadleafcommerce.core.order.fulfillment.domain;
 import com.thoughtworks.xstream.XStream;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.Ignore;
 public class TestFixedPriceFulfillmentOptionImplPanktiGen {
     static XStream xStream = new XStream();
 
     @Test
-    @Ignore
     public void testGetPrice1() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl>" +
