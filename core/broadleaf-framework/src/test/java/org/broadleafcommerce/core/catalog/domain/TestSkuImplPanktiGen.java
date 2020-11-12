@@ -27,7 +27,6 @@ import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.Ignore;
 public class TestSkuImplPanktiGen {
     static XStream xStream = new XStream();
 
@@ -48,6 +47,17 @@ public class TestSkuImplPanktiGen {
                 return aClass.getCanonicalName().equals("java.sql.Timestamp");
             }
         });
+    }
+
+
+    private <T> T deserializeObject(String serializedObjectString) {
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
+    private <T> T deserializeObject(File serializedObjectFile) throws Exception {
+        Scanner scanner = new Scanner(serializedObjectFile);
+        String serializedObjectString = scanner.useDelimiter("\\A").next();
+        return (T) xStream.fromXML(serializedObjectString);
     }
 
     @Test
@@ -241,7 +251,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -435,7 +445,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -649,7 +659,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -845,7 +855,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1040,7 +1050,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1236,7 +1246,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1430,7 +1440,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1625,7 +1635,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1837,7 +1847,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -1845,9 +1855,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency10() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency10-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2042,7 +2050,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2237,7 +2245,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2432,7 +2440,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2440,9 +2448,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency14() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency14-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2638,7 +2644,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2646,9 +2652,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency16() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency16-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -2844,7 +2848,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3058,7 +3062,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3066,9 +3070,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency19() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency19-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3076,9 +3078,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency20() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency20-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3272,7 +3272,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3467,7 +3467,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3475,9 +3475,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency23() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency23-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3671,7 +3669,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -3864,7 +3862,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4060,7 +4058,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4254,7 +4252,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4449,7 +4447,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4644,7 +4642,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4652,9 +4650,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency30() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency30-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -4850,7 +4846,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5046,7 +5042,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5054,9 +5050,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency33() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency33-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5251,7 +5245,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5259,9 +5253,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency35() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency35-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5456,7 +5448,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5651,7 +5643,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -5847,7 +5839,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6041,7 +6033,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6049,9 +6041,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency40() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency40-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6059,9 +6049,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency41() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency41-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6069,9 +6057,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency42() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency42-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6267,7 +6253,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6479,7 +6465,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6673,7 +6659,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -6868,7 +6854,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7062,7 +7048,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7070,9 +7056,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency48() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency48-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7266,7 +7250,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7462,7 +7446,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7657,7 +7641,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7665,9 +7649,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency52() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency52-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -7861,7 +7843,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8056,7 +8038,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8251,7 +8233,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8259,9 +8241,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency56() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency56-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8455,7 +8435,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8463,9 +8443,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency58() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency58-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8473,9 +8451,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency59() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency59-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8669,7 +8645,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -8862,7 +8838,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9032,7 +9008,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9227,7 +9203,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9235,9 +9211,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency64() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency64-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9433,7 +9407,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9628,7 +9602,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -9823,7 +9797,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10018,7 +9992,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10213,7 +10187,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10407,7 +10381,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10415,9 +10389,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency71() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency71-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10629,7 +10601,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -10825,7 +10797,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11020,7 +10992,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11028,9 +11000,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency75() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency75-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11038,9 +11008,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency76() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency76-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11236,7 +11204,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11410,7 +11378,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11584,7 +11552,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11779,7 +11747,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -11974,7 +11942,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12170,7 +12138,7 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12178,9 +12146,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency83() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency83-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12375,7 +12341,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12549,7 +12515,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12557,9 +12523,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency86() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency86-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12567,9 +12531,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency87() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency87-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12781,7 +12743,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12789,9 +12751,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency89() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency89-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12799,9 +12759,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency90() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency90-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -12996,7 +12954,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13004,9 +12962,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency92() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency92-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13014,9 +12970,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency93() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency93-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13186,7 +13140,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13382,7 +13336,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13577,7 +13531,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13585,9 +13539,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency97() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency97-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13781,7 +13733,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -13975,7 +13927,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14169,7 +14121,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14363,7 +14315,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14371,9 +14323,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency102() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency102-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14381,9 +14331,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency103() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency103-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14579,7 +14527,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14587,9 +14535,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency105() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency105-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14597,9 +14543,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency106() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency106-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14794,7 +14738,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -14968,7 +14912,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15163,7 +15107,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15171,9 +15115,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency110() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency110-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15181,9 +15123,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency111() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency111-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15378,7 +15318,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15573,7 +15513,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15768,7 +15708,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -15962,7 +15902,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16157,7 +16097,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16351,7 +16291,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16359,9 +16299,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency118() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency118-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16557,7 +16495,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16751,7 +16689,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16946,7 +16884,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -16954,9 +16892,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency122() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency122-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17152,7 +17088,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17347,7 +17283,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17355,9 +17291,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency125() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency125-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17552,7 +17486,7 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17560,9 +17494,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency127() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency127-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17570,9 +17502,7 @@ public class TestSkuImplPanktiGen {
     public void testGetCurrency128() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getCurrency128-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getCurrency());
     }
 
@@ -17767,43 +17697,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Dr. Chilemeister's Insane Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName2-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic dibujado a mano (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName3-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascot Clinique chaleur (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName4() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -17993,15 +17916,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Fin del Mundo Salsa</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName5() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18191,10 +18113,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Habanero</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -18389,10 +18311,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Cowboy Cayenne Pepper Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -18400,17 +18322,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName7() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName7-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt Like a Habanero Shirt (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName8() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18601,10 +18520,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Dr Chilemeister Sauce Hot Insane</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -18798,15 +18717,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName10() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18997,15 +18915,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Blazin 'Selle XXX Hot Habanero sauce au poivre</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName11() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -19195,10 +19112,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Cayene Fresco</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -19206,12 +19123,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName12() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName12-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -19219,12 +19134,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName13() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName13-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -19418,10 +19331,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Roasted Garlic Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -19616,29 +19529,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Insanity Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName16() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName16-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt comme une chemise Habanero (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName17() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -19829,15 +19738,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce chaudes Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName18() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -20026,15 +19934,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte S&amp;uacute;bita</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName19() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -20225,15 +20132,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Loca del Dr. Chilemeister</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName20() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -20423,15 +20329,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Smokin' Toncils Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName21() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -20621,29 +20526,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName22() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName22-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName23() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -20834,15 +20735,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sweet Death Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName24() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21032,15 +20932,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Cool Cayenne Pepper Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName25() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21231,15 +21130,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Blazin' Saddle XXX Hot Habanero Pepper Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName26() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21429,15 +21327,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Cool Cayenne Pepper Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName27() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21626,29 +21523,25 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce mort subite</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName28() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName28-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName29() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21858,29 +21751,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon The Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName30() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName30-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName31() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22071,15 +21960,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Cowboy Cayenne Pepper Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName32() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22269,15 +22157,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName33() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22467,15 +22354,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Scotch Bonnet chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName34() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22666,29 +22552,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Cowboy poivre de Cayenne Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName35() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName35-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Clinique de chaleur tir&amp;eacute; par la main (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName36() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22878,43 +22760,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce Scotch Bonnet Hot Morte</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName37() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName37-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascot Clinique chaleur (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName38() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName38-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName39() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23103,43 +22978,36 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sudden Death Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName40() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName40-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Hand-Drawn (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName41() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName41-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName42() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23330,29 +23198,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Pimienta Roja y Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName43() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName43-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Hand-Drawn (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName44() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23542,43 +23406,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte Saltante</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName45() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName45-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Mascot (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName46() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName46-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName47() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23768,15 +23625,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Habanero</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName48() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23967,43 +23823,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Blazin' Saddle XXX Hot Habanero Pepper Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName49() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName49-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Clinique de chaleur tir&amp;eacute; par la main (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName50() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName50-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName51() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24194,15 +24043,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Insanity Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName52() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24392,29 +24240,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hot Sauce Hoppin</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName53() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName53-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName54() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24605,15 +24449,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauces chaudes Jalapeno</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName55() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24804,29 +24647,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Green Ghost</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName56() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName56-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascot Clinique chaleur (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName57() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -25016,15 +24855,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Bonnet Escoc&amp;eacute;s</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName58() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -25214,15 +25052,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Cayene Fresco</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName59() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -25412,10 +25249,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Fin del Mundo Salsa</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -25609,10 +25446,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Habanero Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -25806,24 +25643,21 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon The Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName62() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName62-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Clinique de chaleur tir&amp;eacute; par la main (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -26017,15 +25851,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName64() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -26215,10 +26048,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce &amp;agrave; l'ail r\u00F4ti chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -26413,10 +26246,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Roasted Red Pepper &amp; Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -26611,15 +26444,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Roasted Red Pepper &amp; Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName67() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -26810,10 +26642,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Jalape&amp;ntilde;o Ardiente</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -26821,17 +26653,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName68() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName68-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName69() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -27022,10 +26851,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Pimienta Roja y Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -27220,15 +27049,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hurtin' Jalapeno Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName71() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -27418,10 +27246,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Smokin 'Hot Sauce Toncils</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -27615,10 +27443,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Smokin' Toncils Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -27812,10 +27640,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -28009,10 +27837,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Roasted Garlic Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -28020,12 +27848,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName75() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName75-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -28237,15 +28063,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon The Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName77() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28436,10 +28261,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Picante del Vaquero</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -28447,17 +28272,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName78() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName78-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Hand-Drawn (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName79() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28647,15 +28469,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Frais Poivre de Cayenne Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName80() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28845,43 +28666,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Smokin 'Hot Sauce Toncils</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName81() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName81-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt Like a Habanero Shirt (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName82() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName82-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Chipotle Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName83() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29071,43 +28885,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Frais Poivre de Cayenne Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName84() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName84-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Camisa de Habanero Hawt (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName85() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName85-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName86() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29315,15 +29122,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hoppin' Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName87() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29514,29 +29320,25 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Sweet Death</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName88() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName88-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascota de Heat Clinic (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName89() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29726,24 +29528,21 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte Saltante</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName90() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName90-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Camisa de Habanero Hawt (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -29751,12 +29550,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName91() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName91-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -29968,10 +29765,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hoppin' Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -29979,12 +29776,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName93() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName93-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -29992,17 +29787,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName94() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName94-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Hand-Drawn (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName95() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30192,24 +29984,21 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Dulce de Cajun de Lousiane</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName96() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName96-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascot Clinique chaleur (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -30217,17 +30006,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName97() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName97-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName98() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30418,15 +30204,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Picante del Vaquero</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName99() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30617,15 +30402,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Jalape&amp;ntilde;o Ardiente</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName100() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30815,29 +30599,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Dulce de Cajun de Lousiane</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName101() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName101-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Mascot (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName102() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31026,15 +30806,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte S&amp;uacute;bita</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName103() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31225,29 +31004,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Loca del Dr. Chilemeister</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName104() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName104-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic dibujado a mano (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName105() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31438,15 +31213,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Sweet Death</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName106() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31636,15 +31410,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Day of the Dead Habanero Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName107() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31834,29 +31607,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName108() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName108-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt Like a Habanero Shirt (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName109() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32047,15 +31816,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Blazin 'Selle XXX Hot Habanero sauce au poivre</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName110() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32246,15 +32014,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Dr Chilemeister Sauce Hot Insane</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName111() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32444,15 +32211,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hoppin' Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName112() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32642,15 +32408,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon Le Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName113() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32841,57 +32606,47 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte Dulce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName114() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName114-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Camisa de Habanero Hawt (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName115() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName115-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascota de Heat Clinic (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName116() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName116-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName117() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33082,38 +32837,32 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Green Ghost</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName118() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName118-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName119() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName119-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascota de Heat Clinic (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -33121,17 +32870,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName120() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName120-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Mascot (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName121() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33322,10 +33068,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Locura</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -33333,12 +33079,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName122() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName122-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt Like a Habanero Shirt (Women's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -33346,12 +33090,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName123() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName123-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -33563,29 +33305,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon The Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName125() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName125-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Mascota de Heat Clinic (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName126() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33775,10 +33513,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Caf&amp;eacute; Cajun Louisiane Douce Sauce Blackening</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -33972,15 +33710,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName128() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -34171,15 +33908,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Scotch Bonnet chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName129() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -34368,10 +34104,10 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce mort subite</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -34566,10 +34302,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hurtin' Jalapeno Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -34763,10 +34499,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon The Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -34961,15 +34697,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sweet Death Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName133() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35159,29 +34894,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce chaude Morte Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName134() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName134-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic dibujado a mano (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName135() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35371,24 +35102,21 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce Habanero Hot Morte</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName136() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName136-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt comme une chemise Habanero (Femmes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -35396,17 +35124,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName137() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName137-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName138() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35596,10 +35321,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Ajo Tostado</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -35607,17 +35332,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName139() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName139-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName140() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35807,10 +35529,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hot Sauce Hoppin</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36024,10 +35746,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hoppin' Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36035,12 +35757,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName142() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName142-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36233,15 +35953,14 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sudden Death Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName144() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36432,10 +36151,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Habanero de la Silla Ardiente</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36443,17 +36162,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName145() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName145-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName146() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36643,10 +36359,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Locura</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36654,12 +36370,10 @@ public class TestSkuImplPanktiGen {
     public void testGetName147() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName147-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
@@ -36667,17 +36381,14 @@ public class TestSkuImplPanktiGen {
     public void testGetName148() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName148-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Habanero Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName149() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36868,15 +36579,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Locura</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName150() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37066,15 +36776,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Caf&amp;eacute; Cajun Louisiane Douce Sauce Blackening</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName151() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37265,15 +36974,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Bull Snort Cowboy poivre de Cayenne Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName152() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37463,15 +37171,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Bonnet Escoc&amp;eacute;s</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName153() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37661,15 +37368,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce chaude Morte Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName154() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37860,15 +37566,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Fantasma Verde</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName155() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38058,15 +37763,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Ajo Tostado</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName156() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38257,15 +37961,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Fantasma Verde</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName157() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38456,15 +38159,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Habanero de la Silla Ardiente</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName158() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38654,15 +38356,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de Locura</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName159() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38852,29 +38553,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa del D&amp;iacute;a de los Muertos de Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName160() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName160-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt comme une chemise Habanero (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName161() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39065,29 +38762,25 @@ public class TestSkuImplPanktiGen {
         "  </excludedFulfillmentOptions>" +
         "  <inventoryType>CHECK_QUANTITY</inventoryType>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa de la Muerte Dulce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName162() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName162-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Scotch Bonnet Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName163() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39278,43 +38971,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Dr. Chilemeister's Insane Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName164() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName164-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic Mascot (Men's)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName165() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName165-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Day of the Dead Habanero Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName166() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39505,15 +39191,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Scotch Bonnet chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName167() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39703,15 +39388,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName168() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39901,15 +39585,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Mata-Gargantas de Bull Snort</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName169() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40099,15 +39782,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Cafe Louisiane Sweet Cajun Blackening Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName170() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40298,29 +39980,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauces chaudes Jalapeno</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName171() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName171-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Hawt comme une chemise Habanero (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName172() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40510,15 +40188,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Armageddon Le Hot Sauce To End All</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName173() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40708,15 +40385,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce &amp;agrave; l'ail r\u00F4ti chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName174() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40906,15 +40582,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Hoppin' Hot Sauce</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName175() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41104,15 +40779,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce Habanero Hot Morte</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName176() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41302,43 +40976,36 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce Scotch Bonnet chaud</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName177() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName177-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Clinique de chaleur tir&amp;eacute; par la main (Hommes)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName178() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName178-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Heat Clinic dibujado a mano (Hombres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName179() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41528,29 +41195,25 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Salsa Mata-Gargantas de Bull Snort</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName180() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName180-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<string>Camisa de Habanero Hawt (Mujeres)</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName181() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41740,15 +41403,14 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Jour de la sauce Scotch Bonnet Hot Morte</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetName182() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41939,74 +41601,62 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<string>Sauce chaudes Chipotle</string>";
-        java.lang.String expectedObject = (java.lang.String) xStream.fromXML(returnedObjectStr);
+        java.lang.String expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getName());
     }
 
     @Test
-    @Ignore
     public void testGetBaseRetailPrice1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice1-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>6.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getBaseRetailPrice());
     }
 
     @Test
-    @Ignore
     public void testGetBaseRetailPrice2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice2-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>4.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getBaseRetailPrice());
     }
 
     @Test
-    @Ignore
     public void testGetBaseRetailPrice3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice3-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>6.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getBaseRetailPrice());
     }
 
     @Test
-    @Ignore
     public void testGetBaseRetailPrice4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice4-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>4.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getBaseRetailPrice());
     }
 
@@ -42014,9 +41664,7 @@ public class TestSkuImplPanktiGen {
     public void testGetBaseSalePrice1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseSalePrice1-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getBaseSalePrice());
     }
 
@@ -42024,9 +41672,7 @@ public class TestSkuImplPanktiGen {
     public void testGetBaseSalePrice2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseSalePrice2-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getBaseSalePrice());
     }
 
@@ -42034,9 +41680,7 @@ public class TestSkuImplPanktiGen {
     public void testGetBaseSalePrice3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseSalePrice3-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getBaseSalePrice());
     }
 
@@ -42044,9 +41688,7 @@ public class TestSkuImplPanktiGen {
     public void testGetBaseSalePrice4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseSalePrice4-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         Assert.assertEquals(null, receivingObject.getBaseSalePrice());
     }
 
@@ -42054,12 +41696,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable1-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42231,10 +41871,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42406,10 +42046,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42417,12 +42057,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable4-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42430,12 +42068,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable5() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable5-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42443,12 +42079,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable6() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable6-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42456,12 +42090,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable7() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable7-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42633,10 +42265,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42808,10 +42440,10 @@ public class TestSkuImplPanktiGen {
         "    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>" +
         "  </excludedFulfillmentOptions>" +
         "</org.broadleafcommerce.core.catalog.domain.SkuImpl>";
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42819,12 +42451,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable10() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable10-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42832,12 +42462,10 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable11() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable11-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
@@ -42845,84 +42473,70 @@ public class TestSkuImplPanktiGen {
     public void testIsTaxable12() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.isTaxable12-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<boolean>true</boolean>";
-        java.lang.Boolean expectedObject = (java.lang.Boolean) xStream.fromXML(returnedObjectStr);
+        java.lang.Boolean expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.isTaxable());
     }
 
     @Test
-    @Ignore
     public void testGetPriceData1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData1-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
         "  <retailPrice>" +
         "    <float>6.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPriceData());
     }
 
     @Test
-    @Ignore
     public void testGetPriceData2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData2-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
         "  <retailPrice>" +
         "    <float>4.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPriceData());
     }
 
     @Test
-    @Ignore
     public void testGetPriceData3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData3-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
         "  <retailPrice>" +
         "    <float>4.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPriceData());
     }
 
     @Test
-    @Ignore
     public void testGetPriceData4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData4-receiving.xml").getFile());
-        Scanner scannerReceiving = new Scanner(fileReceiving);
-        String receivingObjectStr = scannerReceiving.useDelimiter("\\A").next();
-        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = (org.broadleafcommerce.core.catalog.domain.SkuImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.domain.SkuImpl receivingObject = deserializeObject(fileReceiving);
         String returnedObjectStr = 
         "<org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>" +
         "  <retailPrice>" +
         "    <float>6.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPriceData());
     }
 }

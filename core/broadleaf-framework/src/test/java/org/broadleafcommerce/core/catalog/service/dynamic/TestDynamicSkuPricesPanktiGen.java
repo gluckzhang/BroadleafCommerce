@@ -17,10 +17,22 @@
  */
 package org.broadleafcommerce.core.catalog.service.dynamic;
 import com.thoughtworks.xstream.XStream;
+import java.io.File;
+import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
 public class TestDynamicSkuPricesPanktiGen {
     static XStream xStream = new XStream();
+
+    private <T> T deserializeObject(String serializedObjectString) {
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
+    private <T> T deserializeObject(File serializedObjectFile) throws Exception {
+        Scanner scanner = new Scanner(serializedObjectFile);
+        String serializedObjectString = scanner.useDelimiter("\\A").next();
+        return (T) xStream.fromXML(serializedObjectString);
+    }
 
     @Test
     public void testGetPrice1() throws Exception {
@@ -30,12 +42,12 @@ public class TestDynamicSkuPricesPanktiGen {
         "    <float>4.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices receivingObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>4.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPrice());
     }
 
@@ -47,12 +59,12 @@ public class TestDynamicSkuPricesPanktiGen {
         "    <float>6.99</float>" +
         "  </retailPrice>" +
         "</org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices>";
-        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices receivingObject = (org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.catalog.service.dynamic.DynamicSkuPrices receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>6.99</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPrice());
     }
 }

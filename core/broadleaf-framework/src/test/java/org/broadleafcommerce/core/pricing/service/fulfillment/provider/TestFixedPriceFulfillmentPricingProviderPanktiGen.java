@@ -49,16 +49,24 @@ public class TestFixedPriceFulfillmentPricingProviderPanktiGen {
         });
     }
 
+    private <T> T deserializeObject(String serializedObjectString) {
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
+    private <T> T deserializeObject(File serializedObjectFile) throws Exception {
+        Scanner scanner = new Scanner(serializedObjectFile);
+        String serializedObjectString = scanner.useDelimiter("\\A").next();
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
     @Test
     public void testCanCalculateCostForFulfillmentGroup1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider/>";
-        org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider receivingObject = (org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider receivingObject = deserializeObject(receivingObjectStr);
         File fileParams = new File(classLoader.getResource("org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider.canCalculateCostForFulfillmentGroup1-params.xml").getFile());
-        Scanner scannerParams = new Scanner(fileParams);
-        String paramsObjectStr = scannerParams.useDelimiter("\\A").next();
-        Object[] paramObjects = (Object[]) xStream.fromXML(paramsObjectStr);
+        Object[] paramObjects = deserializeObject(fileParams);
         org.broadleafcommerce.core.order.domain.FulfillmentGroup paramObject1 = (org.broadleafcommerce.core.order.domain.FulfillmentGroup) paramObjects[0];
         org.broadleafcommerce.core.order.domain.FulfillmentOption paramObject2 = (org.broadleafcommerce.core.order.domain.FulfillmentOption) paramObjects[1];
         Assert.assertEquals(true, receivingObject.canCalculateCostForFulfillmentGroup(paramObject1, paramObject2));
@@ -69,11 +77,9 @@ public class TestFixedPriceFulfillmentPricingProviderPanktiGen {
         ClassLoader classLoader = getClass().getClassLoader();
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider/>";
-        org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider receivingObject = (org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider receivingObject = deserializeObject(receivingObjectStr);
         File fileParams = new File(classLoader.getResource("org.broadleafcommerce.core.pricing.service.fulfillment.provider.FixedPriceFulfillmentPricingProvider.canCalculateCostForFulfillmentGroup2-params.xml").getFile());
-        Scanner scannerParams = new Scanner(fileParams);
-        String paramsObjectStr = scannerParams.useDelimiter("\\A").next();
-        Object[] paramObjects = (Object[]) xStream.fromXML(paramsObjectStr);
+        Object[] paramObjects = deserializeObject(fileParams);
         org.broadleafcommerce.core.order.domain.FulfillmentGroup paramObject1 = (org.broadleafcommerce.core.order.domain.FulfillmentGroup) paramObjects[0];
         org.broadleafcommerce.core.order.domain.FulfillmentOption paramObject2 = (org.broadleafcommerce.core.order.domain.FulfillmentOption) paramObjects[1];
         Assert.assertEquals(true, receivingObject.canCalculateCostForFulfillmentGroup(paramObject1, paramObject2));

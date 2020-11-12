@@ -17,14 +17,24 @@
  */
 package org.broadleafcommerce.core.order.fulfillment.domain;
 import com.thoughtworks.xstream.XStream;
+import java.io.File;
+import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.Ignore;
 public class TestFixedPriceFulfillmentOptionImplPanktiGen {
     static XStream xStream = new XStream();
 
+    private <T> T deserializeObject(String serializedObjectString) {
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
+    private <T> T deserializeObject(File serializedObjectFile) throws Exception {
+        Scanner scanner = new Scanner(serializedObjectFile);
+        String serializedObjectString = scanner.useDelimiter("\\A").next();
+        return (T) xStream.fromXML(serializedObjectString);
+    }
+
     @Test
-    @Ignore
     public void testGetPrice1() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl>" +
@@ -35,12 +45,12 @@ public class TestFixedPriceFulfillmentOptionImplPanktiGen {
         "  <fulfillmentType>PHYSICAL_SHIP</fulfillmentType>" +
         "  <price>20.00000</price>" +
         "</org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl>";
-        org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl receivingObject = (org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl) xStream.fromXML(receivingObjectStr);
+        org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl receivingObject = deserializeObject(receivingObjectStr);
         String returnedObjectStr = 
         "<org.broadleafcommerce.common.money.Money>" +
         "  <float>20.0</float>" +
         "</org.broadleafcommerce.common.money.Money>";
-        org.broadleafcommerce.common.money.Money expectedObject = (org.broadleafcommerce.common.money.Money) xStream.fromXML(returnedObjectStr);
+        org.broadleafcommerce.common.money.Money expectedObject = deserializeObject(returnedObjectStr);
         Assert.assertEquals(expectedObject, receivingObject.getPrice());
     }
 }

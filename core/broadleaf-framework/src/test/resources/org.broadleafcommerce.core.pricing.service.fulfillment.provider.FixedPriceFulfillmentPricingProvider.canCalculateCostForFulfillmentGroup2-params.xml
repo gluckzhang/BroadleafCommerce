@@ -153,11 +153,6 @@
         <cookied>false</cookied>
         <loggedIn>true</loggedIn>
         <transientProperties/>
-        <!--
-        <archiveStatus>
-          <archived>N</archived>
-        </archiveStatus>
-        -->
       </customer>
       <status>IN_PROCESS</status>
       <totalTax>0.00000</totalTax>
