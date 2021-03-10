@@ -1,0 +1,468 @@
+<!--
+  #%L
+  BroadleafCommerce Framework
+  %%
+  Copyright (C) 2009 - 2020 Broadleaf Commerce
+  %%
+  Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+  (the "Fair Use License" located  at http://license.broadleafcommerce.org/fair_use_license-1.0.txt)
+  unless the restrictions on use therein are violated and require payment to Broadleaf in which case
+  the Broadleaf End User License Agreement (EULA), Version 1.1
+  (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
+  shall apply.
+  
+  Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
+  between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
+  #L%
+  -->
+<org.broadleafcommerce.core.catalog.domain.SkuImpl>
+  <id>6</id>
+  <retailPrice>6.99000</retailPrice>
+  <cost>5.40000</cost>
+  <name>Day of the Dead Scotch Bonnet Hot Sauce</name>
+  <longDescription>Often mistaken for the Habanero, the Scotch Bonnet has a deeply inverted tip as opposed to the pointed end of the Habanero. Ranging in many colors from green to yellow-orange, the Scotch Bonnet is a staple in West Indies and Barbados style pepper sauces.</longDescription>
+  <taxable>Y</taxable>
+  <discountable>Y</discountable>
+  <activeStartDate class="java.sql.Timestamp" serialization="custom">
+    <date>
+      <default/>
+      <long>1604521149000</long>
+    </date>
+    <java.sql.Timestamp>
+      <default>
+        <nanos>414000000</nanos>
+      </default>
+    </java.sql.Timestamp>
+  </activeStartDate>
+  <skuMedia class="org.hibernate.collection.internal.PersistentMap">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuMedia</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </skuMedia>
+  <legacySkuMedia/>
+  <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
+    <id>6</id>
+    <url>/hot-sauces/day_of_the_dead_scotch_bonnet_sauce</url>
+    <overrideGeneratedUrl>false</overrideGeneratedUrl>
+    <manufacturer>Spice Exchange</manufacturer>
+    <isFeaturedProduct>false</isFeaturedProduct>
+    <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <skus/>
+    <crossSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.crossSaleProducts</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </crossSaleProducts>
+    <upSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.upSaleProducts</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </upSaleProducts>
+    <additionalSkus class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>true</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.additionalSkus</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <storedSnapshot class="list"/>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+      <bag/>
+    </additionalSkus>
+    <allParentCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>true</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.allParentCategoryXrefs</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <storedSnapshot class="list">
+        <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+          <id>21</id>
+          <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl">
+            <id>2001</id>
+            <name>Home</name>
+            <url>/</url>
+            <overrideGeneratedUrl>false</overrideGeneratedUrl>
+            <description>Home</description>
+            <activeStartDate class="java.sql.Timestamp" serialization="custom">
+              <date>
+                <default/>
+                <long>1604521149000</long>
+              </date>
+              <java.sql.Timestamp>
+                <default>
+                  <nanos>371000000</nanos>
+                </default>
+              </java.sql.Timestamp>
+            </activeStartDate>
+            <displayTemplate>layout/homepage</displayTemplate>
+            <rootDisplayOrder>-5.000000</rootDisplayOrder>
+            <allChildCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allChildCategoryXrefs</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allChildCategoryXrefs>
+            <allParentCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allParentCategoryXrefs</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allParentCategoryXrefs>
+            <allProductXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allProductXrefs</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allProductXrefs>
+            <categoryMedia class="org.hibernate.collection.internal.PersistentMap">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.categoryMedia</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </categoryMedia>
+            <legacyCategoryMedia/>
+            <featuredProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.featuredProducts</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </featuredProducts>
+            <crossSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.crossSaleProducts</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </crossSaleProducts>
+            <upSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.upSaleProducts</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </upSaleProducts>
+            <searchFacets class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.searchFacets</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </searchFacets>
+            <excludedSearchFacets class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.excludedSearchFacets</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </excludedSearchFacets>
+            <categoryAttributes class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.categoryAttributes</role>
+              <key class="long">2001</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </categoryAttributes>
+            <childCategoryXrefs/>
+            <legacyChildCategories/>
+            <allLegacyChildCategories/>
+          </category>
+          <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../../../.."/>
+          <displayOrder>2.000000</displayOrder>
+        </org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+        <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+          <id>6</id>
+          <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl">
+            <id>2002</id>
+            <name>Hot Sauces</name>
+            <url>/hot-sauces</url>
+            <overrideGeneratedUrl>false</overrideGeneratedUrl>
+            <description>Hot Sauces</description>
+            <activeStartDate class="java.sql.Timestamp" serialization="custom">
+              <date>
+                <default/>
+                <long>1604521149000</long>
+              </date>
+              <java.sql.Timestamp>
+                <default>
+                  <nanos>372000000</nanos>
+                </default>
+              </java.sql.Timestamp>
+            </activeStartDate>
+            <rootDisplayOrder>-4.000000</rootDisplayOrder>
+            <allChildCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allChildCategoryXrefs</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allChildCategoryXrefs>
+            <allParentCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allParentCategoryXrefs</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allParentCategoryXrefs>
+            <allProductXrefs class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.allProductXrefs</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </allProductXrefs>
+            <categoryMedia class="org.hibernate.collection.internal.PersistentMap">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.categoryMedia</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </categoryMedia>
+            <legacyCategoryMedia/>
+            <featuredProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.featuredProducts</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </featuredProducts>
+            <crossSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.crossSaleProducts</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </crossSaleProducts>
+            <upSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.upSaleProducts</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </upSaleProducts>
+            <searchFacets class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.searchFacets</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </searchFacets>
+            <excludedSearchFacets class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.excludedSearchFacets</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </excludedSearchFacets>
+            <categoryAttributes class="org.hibernate.collection.internal.PersistentBag">
+              <isTempSession>false</isTempSession>
+              <initialized>false</initialized>
+              <owner class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../.."/>
+              <cachedSize>-1</cachedSize>
+              <role>org.broadleafcommerce.core.catalog.domain.CategoryImpl.categoryAttributes</role>
+              <key class="long">2002</key>
+              <dirty>false</dirty>
+              <elementRemoved>false</elementRemoved>
+              <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+            </categoryAttributes>
+            <childCategoryXrefs/>
+            <legacyChildCategories/>
+            <allLegacyChildCategories/>
+          </category>
+          <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../../../.."/>
+          <displayOrder>6.000000</displayOrder>
+          <defaultReference>true</defaultReference>
+        </org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+      </storedSnapshot>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+      <bag>
+        <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl reference="../../storedSnapshot/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl"/>
+        <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl reference="../../storedSnapshot/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl[2]"/>
+      </bag>
+    </allParentCategoryXrefs>
+    <productAttributes class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productAttributes</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </productAttributes>
+    <productOptions class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>true</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productOptions</role>
+      <key class="long">6</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <storedSnapshot class="list"/>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+      <bag/>
+    </productOptions>
+  </defaultProduct>
+  <skuAttributes class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuAttributes</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </skuAttributes>
+  <productOptionValueXrefs class="org.hibernate.collection.internal.PersistentSet">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.productOptionValueXrefs</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </productOptionValueXrefs>
+  <legacyProductOptionValues/>
+  <fees class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fees</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </fees>
+  <fulfillmentFlatRates class="org.hibernate.collection.internal.PersistentMap">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fulfillmentFlatRates</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </fulfillmentFlatRates>
+  <excludedFulfillmentOptions class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.excludedFulfillmentOptions</role>
+    <key class="long">6</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </excludedFulfillmentOptions>
+</org.broadleafcommerce.core.catalog.domain.SkuImpl>

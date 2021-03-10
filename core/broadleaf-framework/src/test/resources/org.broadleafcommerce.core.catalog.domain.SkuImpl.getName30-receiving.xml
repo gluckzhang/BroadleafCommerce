@@ -1,0 +1,222 @@
+<!--
+  #%L
+  BroadleafCommerce Framework
+  %%
+  Copyright (C) 2009 - 2020 Broadleaf Commerce
+  %%
+  Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+  (the "Fair Use License" located  at http://license.broadleafcommerce.org/fair_use_license-1.0.txt)
+  unless the restrictions on use therein are violated and require payment to Broadleaf in which case
+  the Broadleaf End User License Agreement (EULA), Version 1.1
+  (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
+  shall apply.
+  
+  Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
+  between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
+  #L%
+  -->
+<org.broadleafcommerce.core.catalog.domain.SkuImpl>
+  <id>12</id>
+  <retailPrice>4.99000</retailPrice>
+  <cost>3.09000</cost>
+  <name>Cafe Louisiane Sweet Cajun Blackening Sauce</name>
+  <longDescription>One of the more unusual sauces we sell. The original was an old style Cajun sauce and this is it's updated blackening version. It's sweet but you get a great hit of cinnamon and cloves with a nice kick of cayenne heat. Use on all foods to give that Cajun flair!</longDescription>
+  <taxable>Y</taxable>
+  <discountable>Y</discountable>
+  <activeStartDate class="java.sql.Timestamp" serialization="custom">
+    <date>
+      <default/>
+      <long>1604511655000</long>
+    </date>
+    <java.sql.Timestamp>
+      <default>
+        <nanos>77000000</nanos>
+      </default>
+    </java.sql.Timestamp>
+  </activeStartDate>
+  <skuMedia class="org.hibernate.collection.internal.PersistentMap">
+    <isTempSession>false</isTempSession>
+    <initialized>true</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuMedia</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <storedSnapshot class="map">
+      <entry>
+        <string>alt1</string>
+        <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
+          <id>-70</id>
+          <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../../../../.."/>
+          <media class="org.broadleafcommerce.common.media.domain.MediaImpl">
+            <id>1202</id>
+            <url>/cmsstatic/img/sauces/Cafe-Louisiane-Sweet-Cajun-Blackening-Sauce-Close.jpg</url>
+            <title>Cafe Louisiane Sweet Cajun Blackening Sauce Close-up</title>
+            <altText>alt1</altText>
+          </media>
+          <key>alt1</key>
+        </org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
+      </entry>
+      <entry>
+        <string>primary</string>
+        <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
+          <id>-89</id>
+          <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../../../../.."/>
+          <media class="org.broadleafcommerce.common.media.domain.MediaImpl">
+            <id>1201</id>
+            <url>/cmsstatic/img/sauces/Cafe-Louisiane-Sweet-Cajun-Blackening-Sauce-Bottle.jpg</url>
+            <title>Cafe Louisiane Sweet Cajun Blackening Sauce Bottle</title>
+            <altText>primary</altText>
+          </media>
+          <key>primary</key>
+        </org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl>
+      </entry>
+    </storedSnapshot>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    <map>
+      <entry>
+        <string>alt1</string>
+        <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl reference="../../../storedSnapshot/entry/org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl"/>
+      </entry>
+      <entry>
+        <string>primary</string>
+        <org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl reference="../../../storedSnapshot/entry[2]/org.broadleafcommerce.core.catalog.domain.SkuMediaXrefImpl"/>
+      </entry>
+    </map>
+  </skuMedia>
+  <legacySkuMedia/>
+  <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
+    <id>12</id>
+    <url>/hot-sauces/cafe_louisiane_sweet_cajun_blackening_sauce</url>
+    <overrideGeneratedUrl>false</overrideGeneratedUrl>
+    <manufacturer>Garden Row</manufacturer>
+    <isFeaturedProduct>false</isFeaturedProduct>
+    <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <skus/>
+    <crossSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.crossSaleProducts</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </crossSaleProducts>
+    <upSaleProducts class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.upSaleProducts</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </upSaleProducts>
+    <additionalSkus class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.additionalSkus</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </additionalSkus>
+    <allParentCategoryXrefs class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.allParentCategoryXrefs</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </allParentCategoryXrefs>
+    <productAttributes class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productAttributes</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </productAttributes>
+    <productOptions class="org.hibernate.collection.internal.PersistentBag">
+      <isTempSession>false</isTempSession>
+      <initialized>false</initialized>
+      <owner class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>org.broadleafcommerce.core.catalog.domain.ProductImpl.productOptions</role>
+      <key class="long">12</key>
+      <dirty>false</dirty>
+      <elementRemoved>false</elementRemoved>
+      <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    </productOptions>
+  </defaultProduct>
+  <skuAttributes class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.skuAttributes</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </skuAttributes>
+  <productOptionValueXrefs class="org.hibernate.collection.internal.PersistentSet">
+    <isTempSession>false</isTempSession>
+    <initialized>true</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.productOptionValueXrefs</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <storedSnapshot class="map"/>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+    <set/>
+  </productOptionValueXrefs>
+  <legacyProductOptionValues/>
+  <fees class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fees</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </fees>
+  <fulfillmentFlatRates class="org.hibernate.collection.internal.PersistentMap">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.fulfillmentFlatRates</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </fulfillmentFlatRates>
+  <excludedFulfillmentOptions class="org.hibernate.collection.internal.PersistentBag">
+    <isTempSession>false</isTempSession>
+    <initialized>false</initialized>
+    <owner class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../.."/>
+    <cachedSize>-1</cachedSize>
+    <role>org.broadleafcommerce.core.catalog.domain.SkuImpl.excludedFulfillmentOptions</role>
+    <key class="long">12</key>
+    <dirty>false</dirty>
+    <elementRemoved>false</elementRemoved>
+    <allowLoadOutsideTransaction>false</allowLoadOutsideTransaction>
+  </excludedFulfillmentOptions>
+</org.broadleafcommerce.core.catalog.domain.SkuImpl>
