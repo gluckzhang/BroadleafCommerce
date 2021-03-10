@@ -27,6 +27,7 @@ import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.Ignore;
 public class TestSkuImplPanktiGen {
     static XStream xStream = new XStream();
 
@@ -17705,6 +17706,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName2-receiving.xml").getFile());
@@ -17716,6 +17718,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName3-receiving.xml").getFile());
@@ -17727,6 +17730,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName4() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -17924,6 +17928,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName5() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18330,6 +18335,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName8() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18725,6 +18731,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName10() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -18923,6 +18930,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName11() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -19537,6 +19545,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName16() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName16-receiving.xml").getFile());
@@ -19548,6 +19557,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName17() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -19746,6 +19756,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName18() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -19942,6 +19953,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName19() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -21335,6 +21347,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName27() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22165,6 +22178,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName33() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22362,6 +22376,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName34() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22560,6 +22575,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName35() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName35-receiving.xml").getFile());
@@ -22571,6 +22587,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName36() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -22768,6 +22785,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName37() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName37-receiving.xml").getFile());
@@ -23008,6 +23026,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName42() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23217,6 +23236,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName44() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23436,6 +23456,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName47() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -23831,6 +23852,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName49() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName49-receiving.xml").getFile());
@@ -24051,6 +24073,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName52() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24259,6 +24282,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName54() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24655,6 +24679,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName56() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName56-receiving.xml").getFile());
@@ -24666,6 +24691,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName57() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -24863,6 +24889,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName58() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -25060,6 +25087,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName59() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -25651,6 +25679,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName62() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName62-receiving.xml").getFile());
@@ -25859,6 +25888,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName64() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -26452,6 +26482,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName67() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -26661,6 +26692,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName69() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -27057,6 +27089,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName71() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28071,6 +28104,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName77() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28280,6 +28314,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName79() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28477,6 +28512,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName80() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28696,6 +28732,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName83() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -28893,6 +28930,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName84() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName84-receiving.xml").getFile());
@@ -29130,6 +29168,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName87() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29328,6 +29367,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName88() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName88-receiving.xml").getFile());
@@ -29339,6 +29379,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName89() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29536,6 +29577,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName90() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName90-receiving.xml").getFile());
@@ -29795,6 +29837,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName95() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -29992,6 +30035,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName96() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName96-receiving.xml").getFile());
@@ -30014,6 +30058,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName98() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30212,6 +30257,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName99() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30410,6 +30456,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName100() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30618,6 +30665,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName102() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -30814,6 +30862,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName103() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31012,6 +31061,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName104() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName104-receiving.xml").getFile());
@@ -31023,6 +31073,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName105() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31418,6 +31469,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName107() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31626,6 +31678,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName109() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -31824,6 +31877,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName110() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32219,6 +32273,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName112() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32416,6 +32471,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName113() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -32614,6 +32670,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName114() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName114-receiving.xml").getFile());
@@ -32625,6 +32682,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName115() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName115-receiving.xml").getFile());
@@ -32856,6 +32914,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName119() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName119-receiving.xml").getFile());
@@ -32878,6 +32937,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName121() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33313,6 +33373,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName125() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName125-receiving.xml").getFile());
@@ -33324,6 +33385,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName126() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33718,6 +33780,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName128() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -33916,6 +33979,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName129() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -34705,6 +34769,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName133() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -34902,6 +34967,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName134() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName134-receiving.xml").getFile());
@@ -34913,6 +34979,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName135() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35110,6 +35177,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName136() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName136-receiving.xml").getFile());
@@ -35132,6 +35200,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName138() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35340,6 +35409,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName140() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -35961,6 +36031,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName144() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36170,6 +36241,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName146() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36389,6 +36461,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName149() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36587,6 +36660,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName150() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36784,6 +36858,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName151() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -36982,6 +37057,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName152() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37179,6 +37255,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName153() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37376,6 +37453,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName154() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37574,6 +37652,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName155() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37771,6 +37850,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName156() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -37969,6 +38049,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName157() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38167,6 +38248,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName158() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38364,6 +38446,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName159() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -38561,6 +38644,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName160() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName160-receiving.xml").getFile());
@@ -38572,6 +38656,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName161() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39001,6 +39086,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName166() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39396,6 +39482,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName168() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39790,6 +39877,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName170() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -39988,6 +40076,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName171() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName171-receiving.xml").getFile());
@@ -39999,6 +40088,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName172() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40196,6 +40286,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName173() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40590,6 +40681,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName175() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40787,6 +40879,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName176() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -40984,6 +41077,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName177() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName177-receiving.xml").getFile());
@@ -40995,6 +41089,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName178() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName178-receiving.xml").getFile());
@@ -41006,6 +41101,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName179() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41203,6 +41299,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName180() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getName180-receiving.xml").getFile());
@@ -41214,6 +41311,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName181() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41411,6 +41509,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetName182() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -41609,6 +41708,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice1-receiving.xml").getFile());
@@ -41622,6 +41722,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice2-receiving.xml").getFile());
@@ -41635,6 +41736,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice3-receiving.xml").getFile());
@@ -41648,6 +41750,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getBaseRetailPrice4-receiving.xml").getFile());
@@ -42481,6 +42584,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData1() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData1-receiving.xml").getFile());
@@ -42496,6 +42600,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData2() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData2-receiving.xml").getFile());
@@ -42511,6 +42616,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData3() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData3-receiving.xml").getFile());
@@ -42526,6 +42632,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData4() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.catalog.domain.SkuImpl.getPriceData4-receiving.xml").getFile());

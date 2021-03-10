@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 public class TestFixedPriceFulfillmentOptionImplPanktiGen {
     static XStream xStream = new XStream();
 
@@ -35,6 +36,7 @@ public class TestFixedPriceFulfillmentOptionImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPrice1() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.order.fulfillment.domain.FixedPriceFulfillmentOptionImpl>" +
