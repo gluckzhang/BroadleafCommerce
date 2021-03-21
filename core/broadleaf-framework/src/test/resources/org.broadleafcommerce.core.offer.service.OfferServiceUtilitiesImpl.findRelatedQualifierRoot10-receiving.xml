@@ -1,0 +1,1581 @@
+<org.broadleafcommerce.core.offer.service.OfferServiceUtilitiesImpl>
+  <promotableItemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+    <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+    <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl"/>
+  </promotableItemFactory>
+  <offerDao class="dynamic-proxy">
+    <interface>org.broadleafcommerce.core.offer.dao.OfferDao</interface>
+    <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+      <org.easymock.internal.ObjectMethodsFilter>
+        <default>
+          <delegate>
+            <control>
+              <state class="org.easymock.internal.ReplayState">
+                <behavior class="org.easymock.internal.MocksBehavior">
+                  <behaviorLists>
+                    <org.easymock.internal.UnorderedBehavior>
+                      <results>
+                        <org.easymock.internal.ExpectedInvocationAndResults>
+                          <expectedInvocation>
+                            <invocation serialization="custom">
+                              <org.easymock.internal.Invocation>
+                                <default>
+                                  <arguments/>
+                                  <currentCaptures class="list"/>
+                                  <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                </default>
+                                <org.easymock.internal.MethodSerializationWrapper>
+                                  <className>org.broadleafcommerce.core.offer.dao.OfferDao</className>
+                                  <methodName>createOrderItemPriceDetailAdjustment</methodName>
+                                  <parameterTypeNames/>
+                                </org.easymock.internal.MethodSerializationWrapper>
+                              </org.easymock.internal.Invocation>
+                            </invocation>
+                            <matchers/>
+                          </expectedInvocation>
+                          <results>
+                            <callCount>4</callCount>
+                            <ranges>
+                              <org.easymock.internal.Range>
+                                <minimum>0</minimum>
+                                <maximum>2147483647</maximum>
+                              </org.easymock.internal.Range>
+                            </ranges>
+                            <results>
+                              <org.easymock.internal.Result>
+                                <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$3"/>
+                                <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                              </org.easymock.internal.Result>
+                            </results>
+                          </results>
+                        </org.easymock.internal.ExpectedInvocationAndResults>
+                        <org.easymock.internal.ExpectedInvocationAndResults>
+                          <expectedInvocation>
+                            <invocation serialization="custom">
+                              <org.easymock.internal.Invocation>
+                                <default>
+                                  <arguments/>
+                                  <currentCaptures class="list"/>
+                                  <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                </default>
+                                <org.easymock.internal.MethodSerializationWrapper>
+                                  <className>org.broadleafcommerce.core.offer.dao.OfferDao</className>
+                                  <methodName>createOrderAdjustment</methodName>
+                                  <parameterTypeNames/>
+                                </org.easymock.internal.MethodSerializationWrapper>
+                              </org.easymock.internal.Invocation>
+                            </invocation>
+                            <matchers/>
+                          </expectedInvocation>
+                          <results>
+                            <callCount>2</callCount>
+                            <ranges>
+                              <org.easymock.internal.Range>
+                                <minimum>1</minimum>
+                                <maximum>2147483647</maximum>
+                              </org.easymock.internal.Range>
+                            </ranges>
+                            <results>
+                              <org.easymock.internal.Result>
+                                <value class="org.broadleafcommerce.core.offer.service.OfferServiceTest$OrderAdjustmentAnswer">
+                                  <outer-class>
+                                    <fName>testApplyOffersToOrder_Order</fName>
+                                    <offerService class="org.broadleafcommerce.core.offer.service.OfferServiceTest$1">
+                                      <customerOfferDao class="dynamic-proxy">
+                                        <interface>org.broadleafcommerce.core.offer.dao.CustomerOfferDao</interface>
+                                        <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                          <org.easymock.internal.ObjectMethodsFilter>
+                                            <default>
+                                              <delegate>
+                                                <control>
+                                                  <state class="org.easymock.internal.ReplayState">
+                                                    <behavior class="org.easymock.internal.MocksBehavior">
+                                                      <behaviorLists/>
+                                                      <stubResults/>
+                                                      <nice>false</nice>
+                                                      <checkOrder>false</checkOrder>
+                                                      <isThreadSafe>true</isThreadSafe>
+                                                      <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                      <position>0</position>
+                                                    </behavior>
+                                                    <lock>
+                                                      <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                        <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                          <default>
+                                                            <state>0</state>
+                                                          </default>
+                                                        </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                          <default/>
+                                                        </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                      </sync>
+                                                    </lock>
+                                                  </state>
+                                                  <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                  <type>DEFAULT</type>
+                                                </control>
+                                              </delegate>
+                                            </default>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>toString</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>equals</methodName>
+                                              <parameterTypeNames>
+                                                <string>java.lang.Object</string>
+                                              </parameterTypeNames>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>hashCode</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                          </org.easymock.internal.ObjectMethodsFilter>
+                                        </handler>
+                                      </customerOfferDao>
+                                      <offerCodeDao class="dynamic-proxy">
+                                        <interface>org.broadleafcommerce.core.offer.dao.OfferCodeDao</interface>
+                                        <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                          <org.easymock.internal.ObjectMethodsFilter>
+                                            <default>
+                                              <delegate>
+                                                <control>
+                                                  <state class="org.easymock.internal.ReplayState">
+                                                    <behavior class="org.easymock.internal.MocksBehavior">
+                                                      <behaviorLists/>
+                                                      <stubResults/>
+                                                      <nice>false</nice>
+                                                      <checkOrder>false</checkOrder>
+                                                      <isThreadSafe>true</isThreadSafe>
+                                                      <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                      <position>0</position>
+                                                    </behavior>
+                                                    <lock>
+                                                      <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                        <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                          <default>
+                                                            <state>0</state>
+                                                          </default>
+                                                        </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                          <default/>
+                                                        </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                      </sync>
+                                                    </lock>
+                                                  </state>
+                                                  <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                  <type>DEFAULT</type>
+                                                </control>
+                                              </delegate>
+                                            </default>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>toString</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>equals</methodName>
+                                              <parameterTypeNames>
+                                                <string>java.lang.Object</string>
+                                              </parameterTypeNames>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>hashCode</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                          </org.easymock.internal.ObjectMethodsFilter>
+                                        </handler>
+                                      </offerCodeDao>
+                                      <offerDao class="dynamic-proxy" reference="../../../../../../../../../../../../../../../../../.."/>
+                                      <orderOfferProcessor class="org.broadleafcommerce.core.offer.service.processor.OrderOfferProcessorImpl">
+                                        <offerTimeZoneProcessor class="dynamic-proxy">
+                                          <interface>org.broadleafcommerce.core.offer.service.processor.OfferTimeZoneProcessor</interface>
+                                          <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                            <org.easymock.internal.ObjectMethodsFilter>
+                                              <default>
+                                                <delegate>
+                                                  <control>
+                                                    <state class="org.easymock.internal.ReplayState">
+                                                      <behavior class="org.easymock.internal.MocksBehavior">
+                                                        <behaviorLists>
+                                                          <org.easymock.internal.UnorderedBehavior>
+                                                            <results>
+                                                              <org.easymock.internal.ExpectedInvocationAndResults>
+                                                                <expectedInvocation>
+                                                                  <invocation serialization="custom">
+                                                                    <org.easymock.internal.Invocation>
+                                                                      <default>
+                                                                        <arguments>
+                                                                          <null/>
+                                                                        </arguments>
+                                                                        <currentCaptures class="list"/>
+                                                                        <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                      </default>
+                                                                      <org.easymock.internal.MethodSerializationWrapper>
+                                                                        <className>org.broadleafcommerce.core.offer.service.processor.OfferTimeZoneProcessor</className>
+                                                                        <methodName>getTimeZone</methodName>
+                                                                        <parameterTypeNames>
+                                                                          <string>org.broadleafcommerce.core.offer.domain.Offer</string>
+                                                                        </parameterTypeNames>
+                                                                      </org.easymock.internal.MethodSerializationWrapper>
+                                                                    </org.easymock.internal.Invocation>
+                                                                  </invocation>
+                                                                  <matchers>
+                                                                    <org.easymock.internal.matchers.InstanceOf>
+                                                                      <clazz>org.broadleafcommerce.core.offer.domain.OfferImpl</clazz>
+                                                                    </org.easymock.internal.matchers.InstanceOf>
+                                                                  </matchers>
+                                                                </expectedInvocation>
+                                                                <results>
+                                                                  <callCount>8</callCount>
+                                                                  <ranges>
+                                                                    <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                                  </ranges>
+                                                                  <results>
+                                                                    <org.easymock.internal.Result>
+                                                                      <value class="org.easymock.internal.Result$1ReturningAnswer">
+                                                                        <val_-value class="sun.util.calendar.ZoneInfo" serialization="custom">
+                                                                          <java.util.TimeZone>
+                                                                            <default>
+                                                                              <ID>CST</ID>
+                                                                            </default>
+                                                                          </java.util.TimeZone>
+                                                                          <sun.util.calendar.ZoneInfo>
+                                                                            <default>
+                                                                              <checksum>-57728752</checksum>
+                                                                              <dstSavings>3600000</dstSavings>
+                                                                              <rawOffset>-21600000</rawOffset>
+                                                                              <rawOffsetDiff>0</rawOffsetDiff>
+                                                                              <willGMTOffsetChange>false</willGMTOffsetChange>
+                                                                              <offsets>
+                                                                                <int>-21600000</int>
+                                                                                <int>-18000000</int>
+                                                                                <int>3600000</int>
+                                                                              </offsets>
+                                                                              <simpleTimeZoneParams>
+                                                                                <int>2</int>
+                                                                                <int>8</int>
+                                                                                <int>-1</int>
+                                                                                <int>7200000</int>
+                                                                                <int>0</int>
+                                                                                <int>10</int>
+                                                                                <int>1</int>
+                                                                                <int>-1</int>
+                                                                                <int>7200000</int>
+                                                                                <int>0</int>
+                                                                              </simpleTimeZoneParams>
+                                                                              <transitions>
+                                                                                <long>-9048018124800000</long>
+                                                                                <long>-6689901772799967</long>
+                                                                                <long>-6615598694400000</long>
+                                                                                <long>-6561084211199967</long>
+                                                                                <long>-6486781132800000</long>
+                                                                                <long>-6405016780799967</long>
+                                                                                <long>-6355486310400000</long>
+                                                                                <long>-6303449087999967</long>
+                                                                                <long>-6226668748800000</long>
+                                                                                <long>-6162245222399967</long>
+                                                                                <long>-6110237491200000</long>
+                                                                                <long>-6033427660799967</long>
+                                                                                <long>-5978942668800000</long>
+                                                                                <long>-5904610099199967</long>
+                                                                                <long>-5850125107200000</long>
+                                                                                <long>-5775792537599967</long>
+                                                                                <long>-5721307545600000</long>
+                                                                                <long>-5646974975999967</long>
+                                                                                <long>-5592489984000000</long>
+                                                                                <long>-5518157414399967</long>
+                                                                                <long>-5463672422400000</long>
+                                                                                <long>-5386862591999967</long>
+                                                                                <long>-5332377600000000</long>
+                                                                                <long>-5258045030399967</long>
+                                                                                <long>-5203560038400000</long>
+                                                                                <long>-5129227468799967</long>
+                                                                                <long>-5074742476800000</long>
+                                                                                <long>-5000409907199967</long>
+                                                                                <long>-4945924915200000</long>
+                                                                                <long>-4871592345599967</long>
+                                                                                <long>-4817107353600000</long>
+                                                                                <long>-4740297523199967</long>
+                                                                                <long>-4688289792000000</long>
+                                                                                <long>-4611479961599967</long>
+                                                                                <long>-4556994969600000</long>
+                                                                                <long>-4482662399999967</long>
+                                                                                <long>-4428177408000000</long>
+                                                                                <long>-4373662924799999</long>
+                                                                                <long>-4282019020800000</long>
+                                                                                <long>-4225027276799967</long>
+                                                                                <long>-4170542284800000</long>
+                                                                                <long>-4096209715199967</long>
+                                                                                <long>-4041724723200000</long>
+                                                                                <long>-3964914892799967</long>
+                                                                                <long>-3912907161600000</long>
+                                                                                <long>-3836097331199967</long>
+                                                                                <long>-3781612339200000</long>
+                                                                                <long>-3707279769599967</long>
+                                                                                <long>-3652794777600000</long>
+                                                                                <long>-3605358182399967</long>
+                                                                                <long>-3135047270400000</long>
+                                                                                <long>-3060714700799967</long>
+                                                                                <long>-3006229708800000</long>
+                                                                                <long>-2931897139199967</long>
+                                                                                <long>-2877412147200000</long>
+                                                                                <long>-2803079577599967</long>
+                                                                                <long>-2748594585600000</long>
+                                                                                <long>-2674262015999967</long>
+                                                                                <long>-2619777024000000</long>
+                                                                                <long>-2542967193599967</long>
+                                                                                <long>-2490959462400000</long>
+                                                                                <long>-2414149631999967</long>
+                                                                                <long>-2359664640000000</long>
+                                                                                <long>-2285332070399967</long>
+                                                                                <long>-2230847078400000</long>
+                                                                                <long>-2156514508799967</long>
+                                                                                <long>-2102029516800000</long>
+                                                                                <long>-2027696947199967</long>
+                                                                                <long>-1973211955200000</long>
+                                                                                <long>-1898879385599967</long>
+                                                                                <long>-1832008089600000</long>
+                                                                                <long>-1767584563199967</long>
+                                                                                <long>-1703190528000000</long>
+                                                                                <long>-1638767001599967</long>
+                                                                                <long>-1574372966400000</long>
+                                                                                <long>-1509949439999967</long>
+                                                                                <long>-1445555404800000</long>
+                                                                                <long>-1381131878399967</long>
+                                                                                <long>-1316737843200000</long>
+                                                                                <long>-1252314316799967</long>
+                                                                                <long>-1185443020800000</long>
+                                                                                <long>-1121019494399967</long>
+                                                                                <long>-1056625459200000</long>
+                                                                                <long>-992201932799967</long>
+                                                                                <long>-927807897600000</long>
+                                                                                <long>-863384371199967</long>
+                                                                                <long>-798990336000000</long>
+                                                                                <long>-734566809599967</long>
+                                                                                <long>-670172774400000</long>
+                                                                                <long>-605749247999967</long>
+                                                                                <long>-538877952000000</long>
+                                                                                <long>-476931686399967</long>
+                                                                                <long>-410060390400000</long>
+                                                                                <long>-345636863999967</long>
+                                                                                <long>-281242828800000</long>
+                                                                                <long>-216819302399967</long>
+                                                                                <long>-152425267200000</long>
+                                                                                <long>-88001740799967</long>
+                                                                                <long>-23607705600000</long>
+                                                                                <long>40815820800033</long>
+                                                                                <long>105209856000000</long>
+                                                                                <long>169633382400033</long>
+                                                                                <long>236504678400000</long>
+                                                                                <long>300928204800033</long>
+                                                                                <long>365322240000000</long>
+                                                                                <long>429745766400033</long>
+                                                                                <long>494139801600000</long>
+                                                                                <long>518927155200033</long>
+                                                                                <long>622957363200000</long>
+                                                                                <long>665085542400033</long>
+                                                                                <long>751774924800000</long>
+                                                                                <long>816198451200033</long>
+                                                                                <long>883069747200000</long>
+                                                                                <long>945016012800033</long>
+                                                                                <long>1011887308800000</long>
+                                                                                <long>1076310835200033</long>
+                                                                                <long>1140704870400000</long>
+                                                                                <long>1205128396800033</long>
+                                                                                <long>1269522432000000</long>
+                                                                                <long>1333945958400033</long>
+                                                                                <long>1398339993600000</long>
+                                                                                <long>1462763520000033</long>
+                                                                                <long>1527157555200000</long>
+                                                                                <long>1591581081600033</long>
+                                                                                <long>1658452377600000</long>
+                                                                                <long>1720398643200033</long>
+                                                                                <long>1787269939200000</long>
+                                                                                <long>1851693465600033</long>
+                                                                                <long>1916087500800000</long>
+                                                                                <long>1980511027200033</long>
+                                                                                <long>2044905062400000</long>
+                                                                                <long>2109328588800033</long>
+                                                                                <long>2173722624000000</long>
+                                                                                <long>2230714368000033</long>
+                                                                                <long>2302540185600000</long>
+                                                                                <long>2359531929600033</long>
+                                                                                <long>2433835008000000</long>
+                                                                                <long>2488349491200033</long>
+                                                                                <long>2562652569600000</long>
+                                                                                <long>2617167052800033</long>
+                                                                                <long>2691470131200000</long>
+                                                                                <long>2748461875200033</long>
+                                                                                <long>2820287692800000</long>
+                                                                                <long>2877279436800033</long>
+                                                                                <long>2949105254400000</long>
+                                                                                <long>3006096998400033</long>
+                                                                                <long>3080400076800000</long>
+                                                                                <long>3134914560000033</long>
+                                                                                <long>3209217638400000</long>
+                                                                                <long>3263732121600033</long>
+                                                                                <long>3338035200000000</long>
+                                                                                <long>3395026944000033</long>
+                                                                                <long>3466852761600000</long>
+                                                                                <long>3523844505600033</long>
+                                                                                <long>3595670323200000</long>
+                                                                                <long>3652662067200033</long>
+                                                                                <long>3724487884800000</long>
+                                                                                <long>3781479628800033</long>
+                                                                                <long>3855782707200000</long>
+                                                                                <long>3910297190400033</long>
+                                                                                <long>3984600268800000</long>
+                                                                                <long>4039114752000033</long>
+                                                                                <long>4113417830400000</long>
+                                                                                <long>4170409574400033</long>
+                                                                                <long>4242235392000000</long>
+                                                                                <long>4299227136000033</long>
+                                                                                <long>4371052953600000</long>
+                                                                                <long>4428044697600033</long>
+                                                                                <long>4502347776000000</long>
+                                                                                <long>4556862259200033</long>
+                                                                                <long>4631165337600000</long>
+                                                                                <long>4685679820800033</long>
+                                                                                <long>4759982899200000</long>
+                                                                                <long>4807065600000033</long>
+                                                                                <long>4891277721600000</long>
+                                                                                <long>4935883161600033</long>
+                                                                                <long>5020095283200000</long>
+                                                                                <long>5064700723200033</long>
+                                                                                <long>5148912844800000</long>
+                                                                                <long>5195995545600033</long>
+                                                                                <long>5280207667200000</long>
+                                                                                <long>5324813107200033</long>
+                                                                                <long>5409025228800000</long>
+                                                                                <long>5453630668800033</long>
+                                                                                <long>5537842790400000</long>
+                                                                                <long>5582448230400033</long>
+                                                                                <long>5666660352000000</long>
+                                                                                <long>5711265792000033</long>
+                                                                                <long>5795477913600000</long>
+                                                                                <long>5840083353600033</long>
+                                                                                <long>5924295475200000</long>
+                                                                                <long>5971378176000033</long>
+                                                                                <long>6055590297600000</long>
+                                                                                <long>6100195737600033</long>
+                                                                                <long>6184407859200000</long>
+                                                                                <long>6229013299200033</long>
+                                                                                <long>6313225420800000</long>
+                                                                                <long>6357830860800033</long>
+                                                                                <long>6442042982400000</long>
+                                                                                <long>6486648422400033</long>
+                                                                                <long>6570860544000000</long>
+                                                                                <long>6617943244800033</long>
+                                                                                <long>6702155366400000</long>
+                                                                                <long>6746760806400033</long>
+                                                                                <long>6830972928000000</long>
+                                                                                <long>6875578368000033</long>
+                                                                                <long>6959790489600000</long>
+                                                                                <long>7004395929600033</long>
+                                                                                <long>7088608051200000</long>
+                                                                                <long>7133213491200033</long>
+                                                                                <long>7217425612800000</long>
+                                                                                <long>7262031052800033</long>
+                                                                                <long>7346243174400000</long>
+                                                                                <long>7393325875200033</long>
+                                                                                <long>7477537996800000</long>
+                                                                                <long>7522143436800033</long>
+                                                                                <long>7606355558400000</long>
+                                                                                <long>7650960998400033</long>
+                                                                                <long>7735173120000000</long>
+                                                                                <long>7779778560000033</long>
+                                                                                <long>7863990681600000</long>
+                                                                                <long>7908596121600033</long>
+                                                                                <long>7992808243200000</long>
+                                                                                <long>8039890944000033</long>
+                                                                                <long>8124103065600000</long>
+                                                                                <long>8168708505600033</long>
+                                                                                <long>8252920627200000</long>
+                                                                                <long>8297526067200033</long>
+                                                                                <long>8381738188800000</long>
+                                                                                <long>8426343628800033</long>
+                                                                                <long>8510555750400000</long>
+                                                                                <long>8555161190400033</long>
+                                                                                <long>8639373312000000</long>
+                                                                                <long>8683978752000033</long>
+                                                                                <long>8768190873600000</long>
+                                                                              </transitions>
+                                                                            </default>
+                                                                          </sun.util.calendar.ZoneInfo>
+                                                                        </val_-value>
+                                                                      </value>
+                                                                      <shouldFillInStackTrace>true</shouldFillInStackTrace>
+                                                                    </org.easymock.internal.Result>
+                                                                  </results>
+                                                                </results>
+                                                              </org.easymock.internal.ExpectedInvocationAndResults>
+                                                            </results>
+                                                            <checkOrder>false</checkOrder>
+                                                          </org.easymock.internal.UnorderedBehavior>
+                                                        </behaviorLists>
+                                                        <stubResults/>
+                                                        <nice>false</nice>
+                                                        <checkOrder>false</checkOrder>
+                                                        <isThreadSafe>true</isThreadSafe>
+                                                        <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                        <position>0</position>
+                                                      </behavior>
+                                                      <lock>
+                                                        <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                          <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                            <default>
+                                                              <state>0</state>
+                                                            </default>
+                                                          </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                          <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                            <default/>
+                                                          </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        </sync>
+                                                      </lock>
+                                                    </state>
+                                                    <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                    <type>DEFAULT</type>
+                                                  </control>
+                                                </delegate>
+                                              </default>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>toString</methodName>
+                                                <parameterTypeNames/>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>equals</methodName>
+                                                <parameterTypeNames>
+                                                  <string>java.lang.Object</string>
+                                                </parameterTypeNames>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>hashCode</methodName>
+                                                <parameterTypeNames/>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                            </org.easymock.internal.ObjectMethodsFilter>
+                                          </handler>
+                                        </offerTimeZoneProcessor>
+                                        <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        <promotableItemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+                                          <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+                                          <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        </promotableItemFactory>
+                                        <orderItemDao class="dynamic-proxy">
+                                          <interface>org.broadleafcommerce.core.order.dao.OrderItemDao</interface>
+                                          <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                            <org.easymock.internal.ObjectMethodsFilter>
+                                              <default>
+                                                <delegate>
+                                                  <control>
+                                                    <state class="org.easymock.internal.ReplayState">
+                                                      <behavior class="org.easymock.internal.MocksBehavior">
+                                                        <behaviorLists>
+                                                          <org.easymock.internal.UnorderedBehavior>
+                                                            <results>
+                                                              <org.easymock.internal.ExpectedInvocationAndResults>
+                                                                <expectedInvocation>
+                                                                  <invocation serialization="custom">
+                                                                    <org.easymock.internal.Invocation>
+                                                                      <default>
+                                                                        <arguments/>
+                                                                        <currentCaptures class="list"/>
+                                                                        <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                      </default>
+                                                                      <org.easymock.internal.MethodSerializationWrapper>
+                                                                        <className>org.broadleafcommerce.core.order.dao.OrderItemDao</className>
+                                                                        <methodName>createOrderItemPriceDetail</methodName>
+                                                                        <parameterTypeNames/>
+                                                                      </org.easymock.internal.MethodSerializationWrapper>
+                                                                    </org.easymock.internal.Invocation>
+                                                                  </invocation>
+                                                                  <matchers/>
+                                                                </expectedInvocation>
+                                                                <results>
+                                                                  <callCount>4</callCount>
+                                                                  <ranges>
+                                                                    <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../ranges/org.easymock.internal.Range"/>
+                                                                  </ranges>
+                                                                  <results>
+                                                                    <org.easymock.internal.Result>
+                                                                      <value class="org.broadleafcommerce.core.offer.service.OfferServiceTest$OrderItemPriceDetailAnswer">
+                                                                        <outer-class reference="../../../../../../../../../../../../../../../../../../.."/>
+                                                                      </value>
+                                                                      <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                    </org.easymock.internal.Result>
+                                                                  </results>
+                                                                </results>
+                                                              </org.easymock.internal.ExpectedInvocationAndResults>
+                                                              <org.easymock.internal.ExpectedInvocationAndResults>
+                                                                <expectedInvocation>
+                                                                  <invocation serialization="custom">
+                                                                    <org.easymock.internal.Invocation>
+                                                                      <default>
+                                                                        <arguments/>
+                                                                        <currentCaptures class="list"/>
+                                                                        <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                      </default>
+                                                                      <org.easymock.internal.MethodSerializationWrapper>
+                                                                        <className>org.broadleafcommerce.core.order.dao.OrderItemDao</className>
+                                                                        <methodName>createOrderItemQualifier</methodName>
+                                                                        <parameterTypeNames/>
+                                                                      </org.easymock.internal.MethodSerializationWrapper>
+                                                                    </org.easymock.internal.Invocation>
+                                                                  </invocation>
+                                                                  <matchers/>
+                                                                </expectedInvocation>
+                                                                <results>
+                                                                  <callCount>2</callCount>
+                                                                  <ranges>
+                                                                    <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../ranges/org.easymock.internal.Range"/>
+                                                                  </ranges>
+                                                                  <results>
+                                                                    <org.easymock.internal.Result>
+                                                                      <value class="org.broadleafcommerce.core.offer.service.OfferServiceTest$OrderItemQualifierAnswer">
+                                                                        <outer-class reference="../../../../../../../../../../../../../../../../../../.."/>
+                                                                      </value>
+                                                                      <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                    </org.easymock.internal.Result>
+                                                                  </results>
+                                                                </results>
+                                                              </org.easymock.internal.ExpectedInvocationAndResults>
+                                                            </results>
+                                                            <checkOrder>false</checkOrder>
+                                                          </org.easymock.internal.UnorderedBehavior>
+                                                        </behaviorLists>
+                                                        <stubResults/>
+                                                        <nice>false</nice>
+                                                        <checkOrder>false</checkOrder>
+                                                        <isThreadSafe>true</isThreadSafe>
+                                                        <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                        <position>0</position>
+                                                      </behavior>
+                                                      <lock>
+                                                        <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                          <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                            <default>
+                                                              <state>0</state>
+                                                            </default>
+                                                          </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                          <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                            <default/>
+                                                          </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        </sync>
+                                                      </lock>
+                                                    </state>
+                                                    <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                    <type>DEFAULT</type>
+                                                  </control>
+                                                </delegate>
+                                              </default>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>toString</methodName>
+                                                <parameterTypeNames/>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>equals</methodName>
+                                                <parameterTypeNames>
+                                                  <string>java.lang.Object</string>
+                                                </parameterTypeNames>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                              <org.easymock.internal.MethodSerializationWrapper>
+                                                <className>java.lang.Object</className>
+                                                <methodName>hashCode</methodName>
+                                                <parameterTypeNames/>
+                                              </org.easymock.internal.MethodSerializationWrapper>
+                                            </org.easymock.internal.ObjectMethodsFilter>
+                                          </handler>
+                                        </orderItemDao>
+                                        <offerDao class="dynamic-proxy" reference="../../../../../../../../../../../../../../../../../../.."/>
+                                        <offerServiceUtilities class="org.broadleafcommerce.core.offer.service.OfferServiceUtilitiesImpl" reference="../../../../../../../../../../../../../../../../../../../.."/>
+                                      </orderOfferProcessor>
+                                      <itemOfferProcessor class="org.broadleafcommerce.core.offer.service.processor.ItemOfferProcessorImpl">
+                                        <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        <promotableItemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+                                          <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+                                          <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        </promotableItemFactory>
+                                        <offerDao class="dynamic-proxy" reference="../../../../../../../../../../../../../../../../../../.."/>
+                                        <offerServiceUtilities class="org.broadleafcommerce.core.offer.service.OfferServiceUtilitiesImpl" reference="../../../../../../../../../../../../../../../../../../../.."/>
+                                      </itemOfferProcessor>
+                                      <fulfillmentGroupOfferProcessor class="org.broadleafcommerce.core.offer.service.processor.FulfillmentGroupOfferProcessorImpl">
+                                        <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        <promotableItemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+                                          <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+                                          <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                        </promotableItemFactory>
+                                        <offerDao class="dynamic-proxy" reference="../../../../../../../../../../../../../../../../../../.."/>
+                                      </fulfillmentGroupOfferProcessor>
+                                      <promotableItemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+                                        <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+                                        <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                      </promotableItemFactory>
+                                      <orderService class="dynamic-proxy">
+                                        <interface>org.broadleafcommerce.core.order.service.OrderService</interface>
+                                        <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                          <org.easymock.internal.ObjectMethodsFilter>
+                                            <default>
+                                              <delegate>
+                                                <control>
+                                                  <state class="org.easymock.internal.ReplayState">
+                                                    <behavior class="org.easymock.internal.MocksBehavior">
+                                                      <behaviorLists>
+                                                        <org.easymock.internal.UnorderedBehavior>
+                                                          <results>
+                                                            <org.easymock.internal.ExpectedInvocationAndResults>
+                                                              <expectedInvocation>
+                                                                <invocation serialization="custom">
+                                                                  <org.easymock.internal.Invocation>
+                                                                    <default>
+                                                                      <arguments>
+                                                                        <null/>
+                                                                        <null/>
+                                                                        <boolean>false</boolean>
+                                                                      </arguments>
+                                                                      <currentCaptures class="list"/>
+                                                                      <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                    </default>
+                                                                    <org.easymock.internal.MethodSerializationWrapper>
+                                                                      <className>org.broadleafcommerce.core.order.service.OrderService</className>
+                                                                      <methodName>removeItem</methodName>
+                                                                      <parameterTypeNames>
+                                                                        <string>java.lang.Long</string>
+                                                                        <string>java.lang.Long</string>
+                                                                        <string>boolean</string>
+                                                                      </parameterTypeNames>
+                                                                    </org.easymock.internal.MethodSerializationWrapper>
+                                                                  </org.easymock.internal.Invocation>
+                                                                </invocation>
+                                                                <matchers>
+                                                                  <org.easymock.internal.matchers.InstanceOf>
+                                                                    <clazz>java.lang.Long</clazz>
+                                                                  </org.easymock.internal.matchers.InstanceOf>
+                                                                  <org.easymock.internal.matchers.InstanceOf>
+                                                                    <clazz>java.lang.Long</clazz>
+                                                                  </org.easymock.internal.matchers.InstanceOf>
+                                                                  <org.easymock.internal.matchers.Equals>
+                                                                    <expected class="boolean">false</expected>
+                                                                  </org.easymock.internal.matchers.Equals>
+                                                                </matchers>
+                                                              </expectedInvocation>
+                                                              <results>
+                                                                <callCount>0</callCount>
+                                                                <ranges>
+                                                                  <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                                </ranges>
+                                                                <results>
+                                                                  <org.easymock.internal.Result>
+                                                                    <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$12"/>
+                                                                    <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                  </org.easymock.internal.Result>
+                                                                </results>
+                                                              </results>
+                                                            </org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <org.easymock.internal.ExpectedInvocationAndResults>
+                                                              <expectedInvocation>
+                                                                <invocation serialization="custom">
+                                                                  <org.easymock.internal.Invocation>
+                                                                    <default>
+                                                                      <arguments>
+                                                                        <null/>
+                                                                        <null/>
+                                                                      </arguments>
+                                                                      <currentCaptures class="list"/>
+                                                                      <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                    </default>
+                                                                    <org.easymock.internal.MethodSerializationWrapper>
+                                                                      <className>org.broadleafcommerce.core.order.service.OrderService</className>
+                                                                      <methodName>save</methodName>
+                                                                      <parameterTypeNames>
+                                                                        <string>org.broadleafcommerce.core.order.domain.Order</string>
+                                                                        <string>java.lang.Boolean</string>
+                                                                      </parameterTypeNames>
+                                                                    </org.easymock.internal.MethodSerializationWrapper>
+                                                                  </org.easymock.internal.Invocation>
+                                                                </invocation>
+                                                                <matchers>
+                                                                  <org.easymock.internal.matchers.InstanceOf>
+                                                                    <clazz>org.broadleafcommerce.core.order.domain.Order</clazz>
+                                                                  </org.easymock.internal.matchers.InstanceOf>
+                                                                  <org.easymock.internal.matchers.InstanceOf>
+                                                                    <clazz>java.lang.Boolean</clazz>
+                                                                  </org.easymock.internal.matchers.InstanceOf>
+                                                                </matchers>
+                                                              </expectedInvocation>
+                                                              <results>
+                                                                <callCount>3</callCount>
+                                                                <ranges>
+                                                                  <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                                </ranges>
+                                                                <results>
+                                                                  <org.easymock.internal.Result>
+                                                                    <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$9"/>
+                                                                    <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                  </org.easymock.internal.Result>
+                                                                </results>
+                                                              </results>
+                                                            </org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <org.easymock.internal.ExpectedInvocationAndResults>
+                                                              <expectedInvocation>
+                                                                <invocation serialization="custom">
+                                                                  <org.easymock.internal.Invocation>
+                                                                    <default>
+                                                                      <arguments>
+                                                                        <null/>
+                                                                      </arguments>
+                                                                      <currentCaptures class="list"/>
+                                                                      <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                    </default>
+                                                                    <org.easymock.internal.MethodSerializationWrapper>
+                                                                      <className>org.broadleafcommerce.core.order.service.OrderService</className>
+                                                                      <methodName>findOrderById</methodName>
+                                                                      <parameterTypeNames>
+                                                                        <string>java.lang.Long</string>
+                                                                      </parameterTypeNames>
+                                                                    </org.easymock.internal.MethodSerializationWrapper>
+                                                                  </org.easymock.internal.Invocation>
+                                                                </invocation>
+                                                                <matchers>
+                                                                  <org.easymock.internal.matchers.InstanceOf>
+                                                                    <clazz>java.lang.Long</clazz>
+                                                                  </org.easymock.internal.matchers.InstanceOf>
+                                                                </matchers>
+                                                              </expectedInvocation>
+                                                              <results>
+                                                                <callCount>0</callCount>
+                                                                <ranges>
+                                                                  <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                                </ranges>
+                                                                <results>
+                                                                  <org.easymock.internal.Result>
+                                                                    <value class="org.broadleafcommerce.core.offer.service.OfferServiceTest$2">
+                                                                      <val_-myOrder>
+                                                                        <threadLocalHashCode>570124355</threadLocalHashCode>
+                                                                      </val_-myOrder>
+                                                                      <outer-class reference="../../../../../../../../../../../../../../../../../.."/>
+                                                                    </value>
+                                                                    <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                  </org.easymock.internal.Result>
+                                                                </results>
+                                                              </results>
+                                                            </org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <org.easymock.internal.ExpectedInvocationAndResults>
+                                                              <expectedInvocation>
+                                                                <invocation serialization="custom">
+                                                                  <org.easymock.internal.Invocation>
+                                                                    <default>
+                                                                      <arguments/>
+                                                                      <currentCaptures class="list"/>
+                                                                      <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                    </default>
+                                                                    <org.easymock.internal.MethodSerializationWrapper>
+                                                                      <className>org.broadleafcommerce.core.order.service.OrderService</className>
+                                                                      <methodName>getAutomaticallyMergeLikeItems</methodName>
+                                                                      <parameterTypeNames/>
+                                                                    </org.easymock.internal.MethodSerializationWrapper>
+                                                                  </org.easymock.internal.Invocation>
+                                                                </invocation>
+                                                                <matchers/>
+                                                              </expectedInvocation>
+                                                              <results>
+                                                                <callCount>0</callCount>
+                                                                <ranges>
+                                                                  <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                                </ranges>
+                                                                <results>
+                                                                  <org.easymock.internal.Result>
+                                                                    <value class="org.easymock.internal.Result$1ReturningAnswer">
+                                                                      <val_-value class="boolean">true</val_-value>
+                                                                    </value>
+                                                                    <shouldFillInStackTrace>true</shouldFillInStackTrace>
+                                                                  </org.easymock.internal.Result>
+                                                                </results>
+                                                              </results>
+                                                            </org.easymock.internal.ExpectedInvocationAndResults>
+                                                          </results>
+                                                          <checkOrder>false</checkOrder>
+                                                        </org.easymock.internal.UnorderedBehavior>
+                                                      </behaviorLists>
+                                                      <stubResults/>
+                                                      <nice>false</nice>
+                                                      <checkOrder>false</checkOrder>
+                                                      <isThreadSafe>true</isThreadSafe>
+                                                      <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                      <position>0</position>
+                                                    </behavior>
+                                                    <lock>
+                                                      <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                        <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                          <default>
+                                                            <state>0</state>
+                                                          </default>
+                                                        </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                          <default/>
+                                                        </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                      </sync>
+                                                    </lock>
+                                                  </state>
+                                                  <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                  <type>DEFAULT</type>
+                                                </control>
+                                              </delegate>
+                                            </default>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>toString</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>equals</methodName>
+                                              <parameterTypeNames>
+                                                <string>java.lang.Object</string>
+                                              </parameterTypeNames>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                            <org.easymock.internal.MethodSerializationWrapper>
+                                              <className>java.lang.Object</className>
+                                              <methodName>hashCode</methodName>
+                                              <parameterTypeNames/>
+                                            </org.easymock.internal.MethodSerializationWrapper>
+                                          </org.easymock.internal.ObjectMethodsFilter>
+                                        </handler>
+                                      </orderService>
+                                      <outer-class reference="../.."/>
+                                    </offerService>
+                                    <customerOfferDaoMock class="dynamic-proxy" reference="../offerService/customerOfferDao"/>
+                                    <offerCodeDaoMock class="dynamic-proxy" reference="../offerService/offerCodeDao"/>
+                                    <offerDaoMock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../../.."/>
+                                    <orderItemDaoMock class="dynamic-proxy" reference="../offerService/orderOfferProcessor/orderItemDao"/>
+                                    <orderServiceMock class="dynamic-proxy" reference="../offerService/orderService"/>
+                                    <orderItemServiceMock class="dynamic-proxy">
+                                      <interface>org.broadleafcommerce.core.order.service.OrderItemService</interface>
+                                      <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                        <org.easymock.internal.ObjectMethodsFilter>
+                                          <default>
+                                            <delegate>
+                                              <control>
+                                                <state class="org.easymock.internal.ReplayState">
+                                                  <behavior class="org.easymock.internal.MocksBehavior">
+                                                    <behaviorLists>
+                                                      <org.easymock.internal.UnorderedBehavior>
+                                                        <results>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.service.OrderItemService</className>
+                                                                    <methodName>saveOrderItem</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.domain.OrderItem</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.domain.OrderItem</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$8"/>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                        </results>
+                                                        <checkOrder>false</checkOrder>
+                                                      </org.easymock.internal.UnorderedBehavior>
+                                                    </behaviorLists>
+                                                    <stubResults/>
+                                                    <nice>false</nice>
+                                                    <checkOrder>false</checkOrder>
+                                                    <isThreadSafe>true</isThreadSafe>
+                                                    <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                    <position>0</position>
+                                                  </behavior>
+                                                  <lock>
+                                                    <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                      <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <default>
+                                                          <state>0</state>
+                                                        </default>
+                                                      </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                      <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        <default/>
+                                                      </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                    </sync>
+                                                  </lock>
+                                                </state>
+                                                <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                <type>DEFAULT</type>
+                                              </control>
+                                            </delegate>
+                                          </default>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>toString</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>equals</methodName>
+                                            <parameterTypeNames>
+                                              <string>java.lang.Object</string>
+                                            </parameterTypeNames>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>hashCode</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                        </org.easymock.internal.ObjectMethodsFilter>
+                                      </handler>
+                                    </orderItemServiceMock>
+                                    <fgItemDaoMock class="dynamic-proxy">
+                                      <interface>org.broadleafcommerce.core.order.dao.FulfillmentGroupItemDao</interface>
+                                      <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                        <org.easymock.internal.ObjectMethodsFilter>
+                                          <default>
+                                            <delegate>
+                                              <control>
+                                                <state class="org.easymock.internal.ReplayState">
+                                                  <behavior class="org.easymock.internal.MocksBehavior">
+                                                    <behaviorLists>
+                                                      <org.easymock.internal.UnorderedBehavior>
+                                                        <results>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.dao.FulfillmentGroupItemDao</className>
+                                                                    <methodName>save</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.domain.FulfillmentGroupItem</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.domain.FulfillmentGroupItem</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$11"/>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments/>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.dao.FulfillmentGroupItemDao</className>
+                                                                    <methodName>create</methodName>
+                                                                    <parameterTypeNames/>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers/>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$2"/>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.dao.FulfillmentGroupItemDao</className>
+                                                                    <methodName>delete</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.domain.FulfillmentGroupItem</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.domain.FulfillmentGroupItem</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.easymock.internal.Result$1ReturningAnswer"/>
+                                                                  <shouldFillInStackTrace>true</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                        </results>
+                                                        <checkOrder>false</checkOrder>
+                                                      </org.easymock.internal.UnorderedBehavior>
+                                                    </behaviorLists>
+                                                    <stubResults/>
+                                                    <nice>false</nice>
+                                                    <checkOrder>false</checkOrder>
+                                                    <isThreadSafe>true</isThreadSafe>
+                                                    <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                    <position>0</position>
+                                                  </behavior>
+                                                  <lock>
+                                                    <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                      <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <default>
+                                                          <state>0</state>
+                                                        </default>
+                                                      </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                      <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        <default/>
+                                                      </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                    </sync>
+                                                  </lock>
+                                                </state>
+                                                <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                <type>DEFAULT</type>
+                                              </control>
+                                            </delegate>
+                                          </default>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>toString</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>equals</methodName>
+                                            <parameterTypeNames>
+                                              <string>java.lang.Object</string>
+                                            </parameterTypeNames>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>hashCode</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                        </org.easymock.internal.ObjectMethodsFilter>
+                                      </handler>
+                                    </fgItemDaoMock>
+                                    <dataProvider/>
+                                    <offerTimeZoneProcessorMock class="dynamic-proxy" reference="../offerService/orderOfferProcessor/offerTimeZoneProcessor"/>
+                                    <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../../../../../../../../../../../../../../../../../../promotableItemFactory/promotableOfferUtility"/>
+                                    <fgServiceMock class="dynamic-proxy">
+                                      <interface>org.broadleafcommerce.core.order.service.FulfillmentGroupService</interface>
+                                      <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                        <org.easymock.internal.ObjectMethodsFilter>
+                                          <default>
+                                            <delegate>
+                                              <control>
+                                                <state class="org.easymock.internal.ReplayState">
+                                                  <behavior class="org.easymock.internal.MocksBehavior">
+                                                    <behaviorLists>
+                                                      <org.easymock.internal.UnorderedBehavior>
+                                                        <results>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                      <boolean>false</boolean>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.service.FulfillmentGroupService</className>
+                                                                    <methodName>addItemToFulfillmentGroup</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.service.call.FulfillmentGroupItemRequest</string>
+                                                                      <string>boolean</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.service.call.FulfillmentGroupItemRequest</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                                <org.easymock.internal.matchers.Equals>
+                                                                  <expected class="boolean">false</expected>
+                                                                </org.easymock.internal.matchers.Equals>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$1"/>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                      <boolean>false</boolean>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.service.FulfillmentGroupService</className>
+                                                                    <methodName>collapseToOneShippableFulfillmentGroup</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.domain.Order</string>
+                                                                      <string>boolean</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.domain.Order</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                                <org.easymock.internal.matchers.Equals>
+                                                                  <expected class="boolean">false</expected>
+                                                                </org.easymock.internal.matchers.Equals>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferDataItemProvider$10"/>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                        </results>
+                                                        <checkOrder>false</checkOrder>
+                                                      </org.easymock.internal.UnorderedBehavior>
+                                                    </behaviorLists>
+                                                    <stubResults/>
+                                                    <nice>false</nice>
+                                                    <checkOrder>false</checkOrder>
+                                                    <isThreadSafe>true</isThreadSafe>
+                                                    <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                    <position>0</position>
+                                                  </behavior>
+                                                  <lock>
+                                                    <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                      <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <default>
+                                                          <state>0</state>
+                                                        </default>
+                                                      </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                      <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        <default/>
+                                                      </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                    </sync>
+                                                  </lock>
+                                                </state>
+                                                <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                <type>DEFAULT</type>
+                                              </control>
+                                            </delegate>
+                                          </default>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>toString</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>equals</methodName>
+                                            <parameterTypeNames>
+                                              <string>java.lang.Object</string>
+                                            </parameterTypeNames>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>hashCode</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                        </org.easymock.internal.ObjectMethodsFilter>
+                                      </handler>
+                                    </fgServiceMock>
+                                    <multishipOptionServiceMock class="dynamic-proxy">
+                                      <interface>org.broadleafcommerce.core.order.service.OrderMultishipOptionService</interface>
+                                      <handler class="org.easymock.internal.ObjectMethodsFilter" serialization="custom">
+                                        <org.easymock.internal.ObjectMethodsFilter>
+                                          <default>
+                                            <delegate>
+                                              <control>
+                                                <state class="org.easymock.internal.ReplayState">
+                                                  <behavior class="org.easymock.internal.MocksBehavior">
+                                                    <behaviorLists>
+                                                      <org.easymock.internal.UnorderedBehavior>
+                                                        <results>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.service.OrderMultishipOptionService</className>
+                                                                    <methodName>findOrderMultishipOptions</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>java.lang.Long</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>java.lang.Long</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.broadleafcommerce.core.offer.service.OfferServiceTest$3">
+                                                                    <outer-class reference="../../../../../../../../../../../../../../../../.."/>
+                                                                  </value>
+                                                                  <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                          <org.easymock.internal.ExpectedInvocationAndResults>
+                                                            <expectedInvocation>
+                                                              <invocation serialization="custom">
+                                                                <org.easymock.internal.Invocation>
+                                                                  <default>
+                                                                    <arguments>
+                                                                      <null/>
+                                                                    </arguments>
+                                                                    <currentCaptures class="list"/>
+                                                                    <mock class="dynamic-proxy" reference="../../../../../../../../../../../../../../../.."/>
+                                                                  </default>
+                                                                  <org.easymock.internal.MethodSerializationWrapper>
+                                                                    <className>org.broadleafcommerce.core.order.service.OrderMultishipOptionService</className>
+                                                                    <methodName>deleteAllOrderMultishipOptions</methodName>
+                                                                    <parameterTypeNames>
+                                                                      <string>org.broadleafcommerce.core.order.domain.Order</string>
+                                                                    </parameterTypeNames>
+                                                                  </org.easymock.internal.MethodSerializationWrapper>
+                                                                </org.easymock.internal.Invocation>
+                                                              </invocation>
+                                                              <matchers>
+                                                                <org.easymock.internal.matchers.InstanceOf>
+                                                                  <clazz>org.broadleafcommerce.core.order.domain.Order</clazz>
+                                                                </org.easymock.internal.matchers.InstanceOf>
+                                                              </matchers>
+                                                            </expectedInvocation>
+                                                            <results>
+                                                              <callCount>0</callCount>
+                                                              <ranges>
+                                                                <org.easymock.internal.Range reference="../../../../../../../../../../../../../../../../../../../../../org.easymock.internal.ExpectedInvocationAndResults/results/ranges/org.easymock.internal.Range"/>
+                                                              </ranges>
+                                                              <results>
+                                                                <org.easymock.internal.Result>
+                                                                  <value class="org.easymock.internal.Result$1ReturningAnswer"/>
+                                                                  <shouldFillInStackTrace>true</shouldFillInStackTrace>
+                                                                </org.easymock.internal.Result>
+                                                              </results>
+                                                            </results>
+                                                          </org.easymock.internal.ExpectedInvocationAndResults>
+                                                        </results>
+                                                        <checkOrder>false</checkOrder>
+                                                      </org.easymock.internal.UnorderedBehavior>
+                                                    </behaviorLists>
+                                                    <stubResults/>
+                                                    <nice>false</nice>
+                                                    <checkOrder>false</checkOrder>
+                                                    <isThreadSafe>true</isThreadSafe>
+                                                    <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                                                    <position>0</position>
+                                                  </behavior>
+                                                  <lock>
+                                                    <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                                                      <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                        <default>
+                                                          <state>0</state>
+                                                        </default>
+                                                      </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                                                      <java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                        <default/>
+                                                      </java.util.concurrent.locks.ReentrantLock_-Sync>
+                                                    </sync>
+                                                  </lock>
+                                                </state>
+                                                <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+                                                <type>DEFAULT</type>
+                                              </control>
+                                            </delegate>
+                                          </default>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>toString</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>equals</methodName>
+                                            <parameterTypeNames>
+                                              <string>java.lang.Object</string>
+                                            </parameterTypeNames>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                          <org.easymock.internal.MethodSerializationWrapper>
+                                            <className>java.lang.Object</className>
+                                            <methodName>hashCode</methodName>
+                                            <parameterTypeNames/>
+                                          </org.easymock.internal.MethodSerializationWrapper>
+                                        </org.easymock.internal.ObjectMethodsFilter>
+                                      </handler>
+                                    </multishipOptionServiceMock>
+                                  </outer-class>
+                                </value>
+                                <shouldFillInStackTrace>false</shouldFillInStackTrace>
+                              </org.easymock.internal.Result>
+                            </results>
+                          </results>
+                        </org.easymock.internal.ExpectedInvocationAndResults>
+                      </results>
+                      <checkOrder>false</checkOrder>
+                    </org.easymock.internal.UnorderedBehavior>
+                  </behaviorLists>
+                  <stubResults/>
+                  <nice>false</nice>
+                  <checkOrder>false</checkOrder>
+                  <isThreadSafe>true</isThreadSafe>
+                  <shouldBeUsedInOneThread>false</shouldBeUsedInOneThread>
+                  <position>0</position>
+                </behavior>
+                <lock>
+                  <sync class="java.util.concurrent.locks.ReentrantLock$NonfairSync" serialization="custom">
+                    <java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                      <default>
+                        <state>0</state>
+                      </default>
+                    </java.util.concurrent.locks.AbstractQueuedSynchronizer>
+                    <java.util.concurrent.locks.ReentrantLock_-Sync>
+                      <default/>
+                    </java.util.concurrent.locks.ReentrantLock_-Sync>
+                  </sync>
+                </lock>
+              </state>
+              <behavior class="org.easymock.internal.MocksBehavior" reference="../state/behavior"/>
+              <type>DEFAULT</type>
+            </control>
+          </delegate>
+        </default>
+        <org.easymock.internal.MethodSerializationWrapper>
+          <className>java.lang.Object</className>
+          <methodName>toString</methodName>
+          <parameterTypeNames/>
+        </org.easymock.internal.MethodSerializationWrapper>
+        <org.easymock.internal.MethodSerializationWrapper>
+          <className>java.lang.Object</className>
+          <methodName>equals</methodName>
+          <parameterTypeNames>
+            <string>java.lang.Object</string>
+          </parameterTypeNames>
+        </org.easymock.internal.MethodSerializationWrapper>
+        <org.easymock.internal.MethodSerializationWrapper>
+          <className>java.lang.Object</className>
+          <methodName>hashCode</methodName>
+          <parameterTypeNames/>
+        </org.easymock.internal.MethodSerializationWrapper>
+      </org.easymock.internal.ObjectMethodsFilter>
+    </handler>
+  </offerDao>
+  <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl" reference="../promotableItemFactory/promotableOfferUtility"/>
+</org.broadleafcommerce.core.offer.service.OfferServiceUtilitiesImpl>

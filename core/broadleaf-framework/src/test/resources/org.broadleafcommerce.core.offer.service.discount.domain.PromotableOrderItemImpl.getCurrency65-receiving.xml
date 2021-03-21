@@ -1,0 +1,495 @@
+<org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl>
+  <promotableOrder class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderImpl">
+    <itemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl">
+      <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+      <promotableOfferUtility class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOfferUtilityImpl"/>
+    </itemFactory>
+    <order class="org.broadleafcommerce.core.order.domain.OrderImpl">
+      <id>8</id>
+      <auditable/>
+      <previewable/>
+      <customer class="org.broadleafcommerce.profile.core.domain.CustomerImpl">
+        <auditable/>
+        <previewable/>
+        <emailAddress>test@test.com</emailAddress>
+        <firstName>John</firstName>
+        <lastName>Tester</lastName>
+        <passwordChangeRequired>false</passwordChangeRequired>
+        <receiveEmail>true</receiveEmail>
+        <registered>true</registered>
+        <deactivated>false</deactivated>
+        <customerAttributes/>
+        <customerAddresses/>
+        <customerPhones/>
+        <customerPayments/>
+        <isTaxExempt>false</isTaxExempt>
+        <anonymous>false</anonymous>
+        <cookied>false</cookied>
+        <loggedIn>false</loggedIn>
+        <transientProperties/>
+      </customer>
+      <subTotal>69.98</subTotal>
+      <emailAddress>test@test.com</emailAddress>
+      <orderItems>
+        <org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl>
+          <id>7</id>
+          <auditable/>
+          <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl">
+            <id>1</id>
+            <name>test1</name>
+            <overrideGeneratedUrl>false</overrideGeneratedUrl>
+            <allChildCategoryXrefs/>
+            <allParentCategoryXrefs/>
+            <allProductXrefs>
+              <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+                <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../../.."/>
+                <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
+                  <overrideGeneratedUrl>false</overrideGeneratedUrl>
+                  <isFeaturedProduct>false</isFeaturedProduct>
+                  <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl">
+                    <id>1</id>
+                    <retailPrice>19.99</retailPrice>
+                    <name>test1</name>
+                    <discountable>Y</discountable>
+                    <dimension/>
+                    <weight/>
+                    <skuMedia/>
+                    <legacySkuMedia/>
+                    <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+                    <skuAttributes/>
+                    <productOptionValueXrefs/>
+                    <legacyProductOptionValues/>
+                    <fees/>
+                    <fulfillmentFlatRates/>
+                    <excludedFulfillmentOptions/>
+                    <quantityAvailable>0</quantityAvailable>
+                  </defaultSku>
+                  <canSellWithoutOptions>false</canSellWithoutOptions>
+                  <skus/>
+                  <crossSaleProducts/>
+                  <upSaleProducts/>
+                  <additionalSkus/>
+                  <allParentCategoryXrefs/>
+                  <productAttributes/>
+                  <productOptions/>
+                  <archiveStatus>
+                    <archived>N</archived>
+                  </archiveStatus>
+                </product>
+              </org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+            </allProductXrefs>
+            <categoryMedia/>
+            <legacyCategoryMedia/>
+            <featuredProducts/>
+            <crossSaleProducts/>
+            <upSaleProducts/>
+            <searchFacets/>
+            <excludedSearchFacets/>
+            <categoryAttributes/>
+            <archiveStatus>
+              <archived>N</archived>
+            </archiveStatus>
+            <childCategoryXrefs/>
+            <legacyChildCategories/>
+            <allLegacyChildCategories/>
+          </category>
+          <order class="org.broadleafcommerce.core.order.domain.OrderImpl" reference="../../.."/>
+          <price>19.99</price>
+          <quantity>2</quantity>
+          <retailPrice>19.99</retailPrice>
+          <salePrice>19.99</salePrice>
+          <name>test1</name>
+          <orderItemAdjustments/>
+          <proratedOrderItemAdjustments/>
+          <orderItemQualifiers/>
+          <candidateItemOffers/>
+          <orderItemPriceDetails>
+            <org.broadleafcommerce.core.order.domain.OrderItemPriceDetailImpl>
+              <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../../.."/>
+              <orderItemPriceDetailAdjustments/>
+              <quantity>2</quantity>
+              <useSalePrice>true</useSalePrice>
+            </org.broadleafcommerce.core.order.domain.OrderItemPriceDetailImpl>
+          </orderItemPriceDetails>
+          <orderItemType>org.broadleafcommerce.core.order.domain.DiscreteOrderItem</orderItemType>
+          <orderItemAttributeMap/>
+          <childOrderItems/>
+          <deproxiedCategory class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../category"/>
+          <baseRetailPrice>19.99</baseRetailPrice>
+          <baseSalePrice>19.99</baseSalePrice>
+          <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product/defaultSku"/>
+          <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product"/>
+          <additionalAttributes/>
+          <discreteOrderItemFeePrices/>
+          <deproxiedSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product/defaultSku"/>
+        </org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl>
+        <org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl>
+          <id>8</id>
+          <auditable/>
+          <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl">
+            <id>2</id>
+            <name>test2</name>
+            <overrideGeneratedUrl>false</overrideGeneratedUrl>
+            <allChildCategoryXrefs/>
+            <allParentCategoryXrefs/>
+            <allProductXrefs>
+              <org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+                <category class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../../.."/>
+                <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl">
+                  <overrideGeneratedUrl>false</overrideGeneratedUrl>
+                  <isFeaturedProduct>false</isFeaturedProduct>
+                  <defaultSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl">
+                    <id>2</id>
+                    <salePrice>10.00</salePrice>
+                    <retailPrice>29.99</retailPrice>
+                    <name>test2</name>
+                    <discountable>Y</discountable>
+                    <dimension/>
+                    <weight/>
+                    <skuMedia/>
+                    <legacySkuMedia/>
+                    <defaultProduct class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../.."/>
+                    <skuAttributes/>
+                    <productOptionValueXrefs/>
+                    <legacyProductOptionValues/>
+                    <fees/>
+                    <fulfillmentFlatRates/>
+                    <excludedFulfillmentOptions/>
+                    <quantityAvailable>0</quantityAvailable>
+                  </defaultSku>
+                  <canSellWithoutOptions>false</canSellWithoutOptions>
+                  <skus/>
+                  <crossSaleProducts/>
+                  <upSaleProducts/>
+                  <additionalSkus/>
+                  <allParentCategoryXrefs/>
+                  <productAttributes/>
+                  <productOptions/>
+                  <archiveStatus>
+                    <archived>N</archived>
+                  </archiveStatus>
+                </product>
+              </org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl>
+            </allProductXrefs>
+            <categoryMedia/>
+            <legacyCategoryMedia/>
+            <featuredProducts/>
+            <crossSaleProducts/>
+            <upSaleProducts/>
+            <searchFacets/>
+            <excludedSearchFacets/>
+            <categoryAttributes/>
+            <archiveStatus>
+              <archived>N</archived>
+            </archiveStatus>
+            <childCategoryXrefs/>
+            <legacyChildCategories/>
+            <allLegacyChildCategories/>
+          </category>
+          <order class="org.broadleafcommerce.core.order.domain.OrderImpl" reference="../../.."/>
+          <price>10.00</price>
+          <quantity>3</quantity>
+          <retailPrice>29.99</retailPrice>
+          <salePrice>10.00</salePrice>
+          <name>test2</name>
+          <orderItemAdjustments/>
+          <proratedOrderItemAdjustments/>
+          <orderItemQualifiers/>
+          <candidateItemOffers/>
+          <orderItemPriceDetails>
+            <org.broadleafcommerce.core.order.domain.OrderItemPriceDetailImpl>
+              <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../../.."/>
+              <orderItemPriceDetailAdjustments/>
+              <quantity>3</quantity>
+              <useSalePrice>true</useSalePrice>
+            </org.broadleafcommerce.core.order.domain.OrderItemPriceDetailImpl>
+          </orderItemPriceDetails>
+          <orderItemType>org.broadleafcommerce.core.order.domain.DiscreteOrderItem</orderItemType>
+          <orderItemAttributeMap/>
+          <childOrderItems/>
+          <deproxiedCategory class="org.broadleafcommerce.core.catalog.domain.CategoryImpl" reference="../category"/>
+          <baseRetailPrice>29.99</baseRetailPrice>
+          <baseSalePrice>10.00</baseSalePrice>
+          <sku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product/defaultSku"/>
+          <product class="org.broadleafcommerce.core.catalog.domain.ProductImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product"/>
+          <additionalAttributes/>
+          <discreteOrderItemFeePrices/>
+          <deproxiedSku class="org.broadleafcommerce.core.catalog.domain.SkuImpl" reference="../category/allProductXrefs/org.broadleafcommerce.core.catalog.domain.CategoryProductXrefImpl/product/defaultSku"/>
+        </org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl>
+      </orderItems>
+      <fulfillmentGroups>
+        <org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl>
+          <id>1</id>
+          <retailFulfillmentPrice>10.00</retailFulfillmentPrice>
+          <fulfillmentPrice>10.00</fulfillmentPrice>
+          <type>PHYSICAL_SHIP</type>
+          <primary>true</primary>
+          <isShippingPriceTaxable>false</isShippingPriceTaxable>
+          <order class="org.broadleafcommerce.core.order.domain.OrderImpl" reference="../../.."/>
+          <address class="org.broadleafcommerce.profile.core.domain.AddressImpl">
+            <firstName>John</firstName>
+            <lastName>Tester</lastName>
+            <addressLine1>123 Test Road</addressLine1>
+            <city>Dallas</city>
+            <state class="org.broadleafcommerce.profile.core.domain.StateImpl">
+              <abbreviation>TX</abbreviation>
+              <name>Texas</name>
+              <country class="org.broadleafcommerce.profile.core.domain.CountryImpl">
+                <abbreviation>US</abbreviation>
+                <name>United States</name>
+              </country>
+            </state>
+            <isoCountrySubdivision>US-TX</isoCountrySubdivision>
+            <country class="org.broadleafcommerce.profile.core.domain.CountryImpl" reference="../state/country"/>
+            <isoCountryAlpha2 class="org.broadleafcommerce.common.i18n.domain.ISOCountryImpl">
+              <alpha2>US</alpha2>
+              <name>UNITED STATES</name>
+            </isoCountryAlpha2>
+            <postalCode>75244</postalCode>
+            <phonePrimary class="org.broadleafcommerce.profile.core.domain.PhoneImpl">
+              <phoneNumber>972-976-1234</phoneNumber>
+              <isDefault>false</isDefault>
+              <isActive>true</isActive>
+            </phonePrimary>
+            <isDefault>true</isDefault>
+            <isActive>true</isActive>
+            <isBusiness>false</isBusiness>
+            <isStreet>false</isStreet>
+            <isMailing>false</isMailing>
+            <standardized>false</standardized>
+          </address>
+          <fulfillmentGroupItems>
+            <org.broadleafcommerce.core.order.domain.FulfillmentGroupItemImpl>
+              <fulfillmentGroup class="org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl" reference="../../.."/>
+              <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../../../../../orderItems/org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl"/>
+              <quantity>2</quantity>
+              <taxes/>
+            </org.broadleafcommerce.core.order.domain.FulfillmentGroupItemImpl>
+          </fulfillmentGroupItems>
+          <fulfillmentGroupFees/>
+          <candidateOffers/>
+          <fulfillmentGroupAdjustments/>
+          <taxes/>
+        </org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl>
+        <org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl>
+          <id>2</id>
+          <retailFulfillmentPrice>20.00</retailFulfillmentPrice>
+          <fulfillmentPrice>20.00</fulfillmentPrice>
+          <type>PHYSICAL_SHIP</type>
+          <primary>true</primary>
+          <isShippingPriceTaxable>false</isShippingPriceTaxable>
+          <order class="org.broadleafcommerce.core.order.domain.OrderImpl" reference="../../.."/>
+          <address class="org.broadleafcommerce.profile.core.domain.AddressImpl">
+            <firstName>John</firstName>
+            <lastName>Tester</lastName>
+            <addressLine1>124 Test Road</addressLine1>
+            <city>Dallas</city>
+            <state class="org.broadleafcommerce.profile.core.domain.StateImpl">
+              <abbreviation>TX</abbreviation>
+              <name>Texas</name>
+              <country class="org.broadleafcommerce.profile.core.domain.CountryImpl">
+                <abbreviation>US</abbreviation>
+                <name>United States</name>
+              </country>
+            </state>
+            <isoCountrySubdivision>US-TX</isoCountrySubdivision>
+            <country class="org.broadleafcommerce.profile.core.domain.CountryImpl" reference="../state/country"/>
+            <isoCountryAlpha2 class="org.broadleafcommerce.common.i18n.domain.ISOCountryImpl">
+              <alpha2>US</alpha2>
+              <name>UNITED STATES</name>
+            </isoCountryAlpha2>
+            <postalCode>75244</postalCode>
+            <phonePrimary class="org.broadleafcommerce.profile.core.domain.PhoneImpl">
+              <phoneNumber>972-976-1234</phoneNumber>
+              <isDefault>false</isDefault>
+              <isActive>true</isActive>
+            </phonePrimary>
+            <isDefault>true</isDefault>
+            <isActive>true</isActive>
+            <isBusiness>false</isBusiness>
+            <isStreet>false</isStreet>
+            <isMailing>false</isMailing>
+            <standardized>false</standardized>
+          </address>
+          <fulfillmentGroupItems>
+            <org.broadleafcommerce.core.order.domain.FulfillmentGroupItemImpl>
+              <fulfillmentGroup class="org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl" reference="../../.."/>
+              <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../../../../../orderItems/org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl[2]"/>
+              <quantity>3</quantity>
+              <taxes/>
+            </org.broadleafcommerce.core.order.domain.FulfillmentGroupItemImpl>
+          </fulfillmentGroupItems>
+          <fulfillmentGroupFees/>
+          <candidateOffers/>
+          <fulfillmentGroupAdjustments/>
+          <taxes/>
+        </org.broadleafcommerce.core.order.domain.FulfillmentGroupImpl>
+      </fulfillmentGroups>
+      <orderAdjustments/>
+      <addedOfferCodes/>
+      <candidateOrderOffers/>
+      <payments/>
+      <additionalOfferInformation/>
+      <orderAttributes/>
+    </order>
+    <allOrderItems>
+      <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl>
+        <promotableOrder class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderImpl" reference="../../.."/>
+        <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../../../order/orderItems/org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl"/>
+        <itemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl" reference="../../../itemFactory"/>
+        <itemPriceDetails>
+          <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemPriceDetailImpl>
+            <promotableOrderItem class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl" reference="../../.."/>
+            <promotableOrderItemPriceDetailAdjustments/>
+            <promotionDiscounts/>
+            <promotionQualifiers/>
+            <quantity>2</quantity>
+            <useSaleAdjustments>false</useSaleAdjustments>
+            <adjustmentsFinalized>false</adjustmentsFinalized>
+          </org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemPriceDetailImpl>
+        </itemPriceDetails>
+        <includeAdjustments>false</includeAdjustments>
+        <extraDataMap/>
+      </org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl>
+      <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../.."/>
+    </allOrderItems>
+    <discountableOrderItems>
+      <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../allOrderItems/org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl"/>
+      <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../.."/>
+    </discountableOrderItems>
+    <currentSortParam>true</currentSortParam>
+    <candidateOrderOfferAdjustments/>
+    <includeOrderAndItemAdjustments>false</includeOrderAndItemAdjustments>
+    <extraDataMap/>
+  </promotableOrder>
+  <orderItem class="org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl" reference="../promotableOrder/order/orderItems/org.broadleafcommerce.core.order.domain.DiscreteOrderItemImpl[2]"/>
+  <itemFactory class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableItemFactoryImpl" reference="../promotableOrder/itemFactory"/>
+  <itemPriceDetails>
+    <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemPriceDetailImpl>
+      <promotableOrderItem class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl" reference="../../.."/>
+      <promotableOrderItemPriceDetailAdjustments/>
+      <promotionDiscounts>
+        <org.broadleafcommerce.core.offer.service.discount.PromotionDiscount>
+          <candidateItemOffer class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableCandidateItemOfferImpl">
+            <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl">
+              <id>2</id>
+              <offerCodes/>
+              <type>ORDER_ITEM</type>
+              <discountType>PERCENT_OFF</discountType>
+              <value>10</value>
+              <priority>1</priority>
+              <startDate>2021-03-20 17:12:45.848 UTC</startDate>
+              <endDate>2021-03-22 17:12:45.848 UTC</endDate>
+              <applyToSalePrice>true</applyToSalePrice>
+              <applyToChildItems>false</applyToChildItems>
+              <combinableWithOtherOffers>true</combinableWithOtherOffers>
+              <automaticallyAdded>true</automaticallyAdded>
+              <maxUsesPerOrder>0</maxUsesPerOrder>
+              <offerItemQualifierRuleType>NONE</offerItemQualifierRuleType>
+              <offerItemTargetRuleType>NONE</offerItemTargetRuleType>
+              <qualifyingItemCriteria>
+                <org.broadleafcommerce.core.offer.domain.OfferQualifyingCriteriaXrefImpl>
+                  <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../.."/>
+                  <offerItemCriteria class="org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl">
+                    <quantity>1</quantity>
+                    <orderItemMatchRule>([MVEL.eval("toUpperCase()","test1"), MVEL.eval("toUpperCase()","test2")] contains MVEL.eval("toUpperCase()", discreteOrderItem.category.name))</orderItemMatchRule>
+                  </offerItemCriteria>
+                </org.broadleafcommerce.core.offer.domain.OfferQualifyingCriteriaXrefImpl>
+              </qualifyingItemCriteria>
+              <legacyQualifyingItemCriteria/>
+              <targetItemCriteria class="singleton-set">
+                <org.broadleafcommerce.core.offer.domain.OfferTargetCriteriaXrefImpl>
+                  <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../.."/>
+                  <offerItemCriteria class="org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl">
+                    <quantity>1</quantity>
+                    <orderItemMatchRule>([MVEL.eval("toUpperCase()","test1"), MVEL.eval("toUpperCase()","test2")] contains MVEL.eval("toUpperCase()", discreteOrderItem.category.name))</orderItemMatchRule>
+                  </offerItemCriteria>
+                </org.broadleafcommerce.core.offer.domain.OfferTargetCriteriaXrefImpl>
+              </targetItemCriteria>
+              <legacyTargetItemCriteria/>
+              <totalitarianOffer>false</totalitarianOffer>
+              <requiresRelatedTargetAndQualifiers>false</requiresRelatedTargetAndQualifiers>
+              <offerMatchRules>
+                <entry>
+                  <string>ORDER</string>
+                  <org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                    <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../../.."/>
+                    <offerRule class="org.broadleafcommerce.core.offer.domain.OfferRuleImpl">
+                      <matchRule>order.subTotal.getAmount()&gt;20</matchRule>
+                    </offerRule>
+                    <key>ORDER</key>
+                  </org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                </entry>
+                <entry>
+                  <string>CUSTOMER</string>
+                  <org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                    <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../../.."/>
+                    <offerRule class="org.broadleafcommerce.core.offer.domain.OfferRuleImpl"/>
+                    <key>CUSTOMER</key>
+                  </org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                </entry>
+                <entry>
+                  <string>FULFILLMENT_GROUP</string>
+                  <org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                    <offer class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../../.."/>
+                    <offerRule class="org.broadleafcommerce.core.offer.domain.OfferRuleImpl"/>
+                    <key>FULFILLMENT_GROUP</key>
+                  </org.broadleafcommerce.core.offer.domain.OfferOfferRuleXrefImpl>
+                </entry>
+              </offerMatchRules>
+              <useListForDiscounts>false</useListForDiscounts>
+              <offerPriceData/>
+              <archiveStatus>
+                <archived>N</archived>
+              </archiveStatus>
+            </offer>
+            <promotableOrder class="org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderImpl" reference="../../../../../../promotableOrder"/>
+            <uses>2</uses>
+            <useQtyOnlyTierCalculation>false</useQtyOnlyTierCalculation>
+            <candidateQualifiersMap>
+              <entry>
+                <org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl reference="../../../offer/qualifyingItemCriteria/org.broadleafcommerce.core.offer.domain.OfferQualifyingCriteriaXrefImpl/offerItemCriteria"/>
+                <list>
+                  <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../../../../../../../../promotableOrder/allOrderItems/org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl"/>
+                  <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../../../../../../../.."/>
+                </list>
+              </entry>
+            </candidateQualifiersMap>
+            <candidateTargetsMap>
+              <entry>
+                <org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl reference="../../../offer/targetItemCriteria/org.broadleafcommerce.core.offer.domain.OfferTargetCriteriaXrefImpl/offerItemCriteria"/>
+                <list>
+                  <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../../../../../../../../promotableOrder/allOrderItems/org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl"/>
+                  <org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl reference="../../../../../../../../.."/>
+                </list>
+              </entry>
+            </candidateTargetsMap>
+            <candidateFixedTargetsMap/>
+            <legacyCandidateTargets/>
+            <minimumTargetsRequired>1</minimumTargetsRequired>
+          </candidateItemOffer>
+          <promotion class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../candidateItemOffer/offer"/>
+          <itemCriteria class="org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl" reference="../candidateItemOffer/offer/targetItemCriteria/org.broadleafcommerce.core.offer.domain.OfferTargetCriteriaXrefImpl/offerItemCriteria"/>
+          <quantity>1</quantity>
+          <finalizedQuantity>1</finalizedQuantity>
+        </org.broadleafcommerce.core.offer.service.discount.PromotionDiscount>
+      </promotionDiscounts>
+      <promotionQualifiers>
+        <org.broadleafcommerce.core.offer.service.discount.PromotionQualifier>
+          <promotion class="org.broadleafcommerce.core.offer.domain.OfferImpl" reference="../../../promotionDiscounts/org.broadleafcommerce.core.offer.service.discount.PromotionDiscount/candidateItemOffer/offer"/>
+          <itemCriteria class="org.broadleafcommerce.core.offer.domain.OfferItemCriteriaImpl" reference="../../../promotionDiscounts/org.broadleafcommerce.core.offer.service.discount.PromotionDiscount/candidateItemOffer/offer/qualifyingItemCriteria/org.broadleafcommerce.core.offer.domain.OfferQualifyingCriteriaXrefImpl/offerItemCriteria"/>
+          <quantity>1</quantity>
+          <finalizedQuantity>1</finalizedQuantity>
+          <price>
+            <float>29.99</float>
+          </price>
+        </org.broadleafcommerce.core.offer.service.discount.PromotionQualifier>
+      </promotionQualifiers>
+      <quantity>3</quantity>
+      <useSaleAdjustments>false</useSaleAdjustments>
+      <adjustmentsFinalized>false</adjustmentsFinalized>
+    </org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemPriceDetailImpl>
+  </itemPriceDetails>
+  <includeAdjustments>false</includeAdjustments>
+  <extraDataMap/>
+</org.broadleafcommerce.core.offer.service.discount.domain.PromotableOrderItemImpl>
