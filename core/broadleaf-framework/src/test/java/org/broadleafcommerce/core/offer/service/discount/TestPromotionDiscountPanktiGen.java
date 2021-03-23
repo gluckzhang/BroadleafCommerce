@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 public class TestPromotionDiscountPanktiGen {
     static XStream xStream = new XStream();
 
@@ -211,6 +212,7 @@ public class TestPromotionDiscountPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testSplit23() throws Exception {
         ClassLoader classLoader = getClass().getClassLoader();
         File fileReceiving = new File(classLoader.getResource("org.broadleafcommerce.core.offer.service.discount.PromotionDiscount.split23-receiving.xml").getFile());

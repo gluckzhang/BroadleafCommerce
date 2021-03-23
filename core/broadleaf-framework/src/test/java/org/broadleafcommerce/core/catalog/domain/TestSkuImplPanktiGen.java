@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 public class TestSkuImplPanktiGen {
     static XStream xStream = new XStream();
 
@@ -238,6 +239,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice1() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -283,6 +285,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetBaseRetailPrice2() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -574,6 +577,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData1() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -625,6 +629,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData2() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -672,6 +677,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData3() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -723,6 +729,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData4() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
@@ -774,6 +781,7 @@ public class TestSkuImplPanktiGen {
     }
 
     @Test
+    @Ignore
     public void testGetPriceData5() throws Exception {
         String receivingObjectStr = 
         "<org.broadleafcommerce.core.catalog.domain.SkuImpl>" +
